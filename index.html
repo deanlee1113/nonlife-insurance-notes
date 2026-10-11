@@ -66,7 +66,7 @@ body {
   font-size: 16px;
   line-height: 1.75;
   word-break: keep-all;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }
 #progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; background: var(--accent); z-index: 50; }
 
@@ -157,6 +157,8 @@ th { background: var(--surface-2); font-weight: 700; white-space: nowrap; }
 tbody tr:last-child td { border-bottom: 0; }
 tbody tr:hover { background: color-mix(in srgb, var(--accent-soft) 45%, transparent); }
 td { min-width: 76px; }
+td:first-child { min-width: 92px; }
+.content a:not(.ts) { overflow-wrap: anywhere; }
 
 /* OX 정답 */
 details { margin: 4px 0 18px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); }
@@ -174,7 +176,8 @@ details[open] { background: var(--accent-soft); }
 #toTop.show { opacity: 1; pointer-events: auto; }
 .toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(18px + env(safe-area-inset-bottom)); z-index: 45; background: var(--text); color: var(--bg); padding: 10px 14px; border-radius: 12px; font-size: 14px; display: none; gap: 10px; align-items: center; box-shadow: var(--shadow); max-width: calc(100% - 32px); }
 .toast.show { display: flex; }
-.toast button { appearance: none; border: 0; background: transparent; color: inherit; font: inherit; font-weight: 700; cursor: pointer; text-decoration: underline; padding: 0; }
+.toast span { white-space: nowrap; }
+.toast button { white-space: nowrap; appearance: none; border: 0; background: transparent; color: inherit; font: inherit; font-weight: 700; cursor: pointer; text-decoration: underline; padding: 0; }
 .scrim { display: none; }
 
 /* 모바일 */
@@ -199,6 +202,7 @@ details[open] { background: var(--accent-soft); }
   body { font-size: 15.5px; }
   table { font-size: 13.5px; }
   th, td { padding: 8px 10px; }
+  th { white-space: normal; }
   .topbar .hide-sm { display: none; }
 }
 @media print {
@@ -213,7 +217,7 @@ details[open] { background: var(--accent-soft); }
 <div id="progress"></div>
 <header class="topbar">
   <button class="btn" id="tocBtn" aria-controls="toc" aria-expanded="false">☰ 목차</button>
-  <div class="brand"><a href="#top">📘 손해보험 기본강의 노트</a></div>
+  <div class="brand"><a href="#top">📘 손해보험<span class="hide-sm"> 기본강의</span> 노트</a></div>
   <button class="btn" id="oxBtn" title="OX 정답 모두 펼치기/접기">정답 펼치기</button>
   <button class="btn" id="themeBtn" title="다크/라이트 전환" aria-label="다크/라이트 전환">🌓</button>
 </header>
