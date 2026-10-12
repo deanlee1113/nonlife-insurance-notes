@@ -1,0 +1,1709 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>암기 체크리스트</title>
+<meta name="description" content="손해보험 기본강의에서 강사가 강조한 암기 항목과 보기 패턴 모음">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --bg: #f7f6f2; --surface: #ffffff; --surface-2: #f0eee8; --text: #1f1f1d; --muted: #6b6a64; --border: #e3e0d8;
+  --accent: #2f5bd3; --accent-soft: #e8eefc; --ts: #c4302b; --ts-soft: #fbeceb; --mark: #fff3bf; --strong: #111110;
+  --mem: #2f5bd3; --mem-soft: #e8eefc; --trap: #c4302b; --trap-soft: #fdeceb; --opt: #1d7a4f; --opt-soft: #e4f4ec;
+  --s: #b42318; --s-soft: #fde4e1; --a: #9a5b00; --a-soft: #fdf0d5; --b: #4b5563; --b-soft: #eceef1; --done: #1d7a4f;
+  --shadow: 0 1px 2px rgba(0,0,0,.04), 0 4px 16px rgba(0,0,0,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #151514; --surface: #1d1d1b; --surface-2: #262623; --text: #e6e4de; --muted: #9c9a92; --border: #34332f;
+    --accent: #8aa8ff; --accent-soft: #232b40; --ts: #ff7b74; --ts-soft: #3a2220; --mark: #4a4215; --strong: #ffffff;
+    --mem: #8aa8ff; --mem-soft: #232b40; --trap: #ff7b74; --trap-soft: #3a2220; --opt: #5fd39a; --opt-soft: #1c3329;
+    --s: #ff8a7f; --s-soft: #3d2320; --a: #f5b851; --a-soft: #3a2f17; --b: #b4bac4; --b-soft: #2b2e33; --done: #5fd39a;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.3);
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #151514; --surface: #1d1d1b; --surface-2: #262623; --text: #e6e4de; --muted: #9c9a92; --border: #34332f;
+  --accent: #8aa8ff; --accent-soft: #232b40; --ts: #ff7b74; --ts-soft: #3a2220; --mark: #4a4215; --strong: #ffffff;
+  --mem: #8aa8ff; --mem-soft: #232b40; --trap: #ff7b74; --trap-soft: #3a2220; --opt: #5fd39a; --opt-soft: #1c3329;
+  --s: #ff8a7f; --s-soft: #3d2320; --a: #f5b851; --a-soft: #3a2f17; --b: #b4bac4; --b-soft: #2b2e33; --done: #5fd39a;
+  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.3);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; font-size: 16px; line-height: 1.7; word-break: keep-all; overflow-wrap: break-word; }
+.topbar { position: sticky; top: 0; z-index: 40; display: flex; align-items: center; gap: 8px; padding: 10px 16px; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid var(--border); }
+.topbar .brand { font-weight: 700; font-size: 15px; flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.btn { appearance: none; border: 1px solid var(--border); background: var(--surface); color: var(--text); font: inherit; font-size: 13.5px; font-weight: 600; padding: 6px 11px; border-radius: 999px; cursor: pointer; white-space: nowrap; line-height: 1.4; text-decoration: none; display: inline-block; }
+.btn:hover { border-color: var(--accent); color: var(--accent); }
+.btn[aria-pressed="true"] { background: var(--text); color: var(--bg); border-color: var(--text); }
+.btn:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.wrap { max-width: 860px; margin: 0 auto; padding: 20px 16px 120px; }
+.hero { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 22px; box-shadow: var(--shadow); }
+.hero h1 { margin: 0 0 6px; font-size: 24px; line-height: 1.35; letter-spacing: -0.02em; }
+.hero p { margin: 0 0 12px; color: var(--muted); font-size: 14.5px; }
+.stats { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+.stat { font-size: 13px; font-weight: 600; padding: 3px 10px; border-radius: 999px; background: var(--surface-2); }
+.progress { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 700; }
+.pbar { flex: 1; height: 10px; border-radius: 999px; background: var(--surface-2); overflow: hidden; }
+.pbar > i { display: block; height: 100%; width: 0; background: var(--done); border-radius: 999px; transition: width .25s; }
+.filters { position: sticky; top: 55px; z-index: 30; margin: 16px -16px 0; padding: 10px 16px; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+.frow { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+.frow::-webkit-scrollbar { display: none; }
+.frow + .frow { margin-top: 6px; }
+.frow .btn { flex: none; }
+.sep { flex: none; width: 1px; background: var(--border); margin: 4px 2px; }
+.btn.small { font-size: 12px; padding: 3px 9px; }
+.nav { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; margin-top: 6px; }
+.nav::-webkit-scrollbar { display: none; }
+.nav a { flex: none; font-size: 13px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--border); color: var(--muted); text-decoration: none; background: var(--surface); white-space: nowrap; }
+.nav a:hover { color: var(--accent); border-color: var(--accent); }
+.cnt { font-size: 11.5px; font-weight: 700; color: var(--muted); }
+.box { margin-top: 18px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 4px 18px; }
+.box summary { cursor: pointer; font-weight: 800; font-size: 16.5px; padding: 12px 0; list-style: none; }
+.box summary::-webkit-details-marker { display: none; }
+.box summary::after { content: " ▾"; color: var(--muted); font-size: 13px; }
+.box:not([open]) summary::after { content: " ▸"; }
+.box ol { margin: 0 0 14px; padding-left: 1.4em; }
+.box li { margin: 6px 0; }
+.box.trap { border-color: color-mix(in srgb, var(--trap) 40%, var(--border)); }
+.unit { margin-top: 34px; scroll-margin-top: 150px; }
+.unit h2 { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; font-size: 20px; margin: 0 0 12px; padding-bottom: 8px; border-bottom: 2px solid var(--text); letter-spacing: -0.01em; }
+.uprog { font-size: 13px; font-weight: 700; color: var(--muted); white-space: nowrap; }
+.uprog.full { color: var(--done); }
+.items { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.item { display: flex; gap: 12px; align-items: flex-start; background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--mem); border-radius: 12px; padding: 12px 14px; transition: opacity .2s; }
+.item.k-trap { border-left-color: var(--trap); }
+.item.k-opt { border-left-color: var(--opt); }
+.item.done { opacity: .55; }
+.item.hidden { display: none; }
+.chk { flex: none; position: relative; width: 26px; height: 26px; margin-top: 2px; cursor: pointer; }
+.chk input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+.chk span { display: block; width: 26px; height: 26px; border: 2px solid var(--border); border-radius: 8px; background: var(--surface); }
+.chk input:checked + span { background: var(--done); border-color: var(--done); }
+.chk input:checked + span::after { content: "✓"; display: block; color: #fff; font-weight: 800; text-align: center; line-height: 22px; font-size: 16px; }
+.chk input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ibody { flex: 1; min-width: 0; }
+.meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 4px; }
+.kind { font-size: 12px; font-weight: 800; padding: 1px 8px; border-radius: 999px; background: var(--mem-soft); color: var(--mem); white-space: nowrap; }
+.k-trap .kind { background: var(--trap-soft); color: var(--trap); }
+.k-opt .kind { background: var(--opt-soft); color: var(--opt); }
+.badge { font-size: 12px; font-weight: 800; padding: 1px 8px; border-radius: 999px; white-space: nowrap; }
+.b-S { background: var(--s-soft); color: var(--s); }
+.b-A { background: var(--a-soft); color: var(--a); }
+.b-B { background: var(--b-soft); color: var(--b); }
+.topic { font-weight: 800; font-size: 15.5px; }
+.option { margin: 6px 0; padding: 8px 12px; border-radius: 10px; background: var(--surface-2); font-weight: 600; font-size: 15px; }
+.k-trap .option { background: var(--trap-soft); }
+.k-opt .option { background: var(--opt-soft); }
+.olabel { display: block; font-size: 11.5px; font-weight: 800; color: var(--muted); margin-bottom: 2px; }
+.k-trap .olabel { color: var(--trap); }
+.k-opt .olabel { color: var(--opt); }
+.fact { font-size: 15.5px; transition: filter .15s; }
+.fact strong { color: var(--strong); background: linear-gradient(transparent 62%, var(--mark) 62%); }
+.foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 10px; margin-top: 6px; font-size: 13px; color: var(--muted); }
+.emph { font-style: italic; }
+a.ts { font-size: 12px; font-weight: 700; padding: 1px 8px; border-radius: 999px; color: var(--ts); background: var(--ts-soft); text-decoration: none; white-space: nowrap; font-variant-numeric: tabular-nums; }
+body.quiz .fact { filter: blur(7px); cursor: pointer; user-select: none; }
+body.quiz .item.reveal .fact { filter: none; cursor: auto; user-select: auto; }
+.quizhint { display: none; font-size: 12.5px; color: var(--muted); margin-top: 4px; }
+body.quiz .quizhint { display: block; }
+.empty { display: none; text-align: center; color: var(--muted); padding: 40px 0; }
+#toTop { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 30; box-shadow: var(--shadow); opacity: 0; pointer-events: none; transition: opacity .2s; }
+#toTop.show { opacity: 1; pointer-events: auto; }
+@media (max-width: 600px) {
+  body { font-size: 15.5px; }
+  .hero { padding: 18px; border-radius: 14px; }
+  .hero h1 { font-size: 20px; }
+  .unit h2 { font-size: 18px; }
+  .item { padding: 11px 12px; gap: 10px; }
+  .topbar .hide-sm { display: none; }
+  .filters { top: 54px; }
+}
+@media print { .topbar, .filters, #toTop { display: none; } .item { break-inside: avoid; } body.quiz .fact { filter: none; } }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="btn" href="./">← 노트</a>
+  <div class="brand">🧠 암기<span class="hide-sm"> 체크리스트</span></div>
+  <button class="btn" id="quizBtn" aria-pressed="false" title="설명을 가리고 스스로 떠올려 보기">🙈 가리기</button>
+  <button class="btn" id="themeBtn" aria-label="다크/라이트 전환">🌓</button>
+</header>
+<div class="wrap">
+  <section class="hero">
+    <h1>강사 강조 암기 & 보기 패턴</h1>
+    <p>강사가 "꼭 외워라", "이것만 알고 가라", "보기에 이렇게 나오면 틀렸다"라고 직접 말한 것만 모았습니다. 외운 항목은 왼쪽 네모를 눌러 체크하세요(이 기기에 저장됩니다).</p>
+    <div class="stats">
+      <span class="stat">전체 205</span>
+      <span class="stat">🧠 암기 94</span>
+      <span class="stat">❌ 틀린 보기 39</span>
+      <span class="stat">📝 보기 표현 72</span>
+      <span class="stat">S 22 · A 69 · B 114</span>
+    </div>
+    <div class="progress"><span>외움</span><div class="pbar"><i id="pfill"></i></div><span id="ptext">0 / 205</span><button class="btn small" id="resetBtn">초기화</button></div>
+  </section>
+
+  <div class="filters" id="filters">
+    <div class="frow" role="group" aria-label="종류">
+      <button class="btn" data-kind="all" aria-pressed="true">전체</button>
+      <button class="btn" data-kind="암기" aria-pressed="false">🧠 암기</button>
+      <button class="btn" data-kind="틀린보기" aria-pressed="false">❌ 틀린 보기</button>
+      <button class="btn" data-kind="보기표현" aria-pressed="false">📝 보기 표현</button>
+      <span class="sep" aria-hidden="true"></span>
+      <button class="btn" id="sOnly" aria-pressed="false">S만</button>
+      <button class="btn" id="todoOnly" aria-pressed="false">안 외운 것만</button>
+    </div>
+    <nav class="nav" aria-label="단원"><a href="#u1">1. 화재보험 <span class="cnt" data-cnt="u1">21</span></a><a href="#u2">2. 해상보험 <span class="cnt" data-cnt="u2">4</span></a><a href="#u3">3. 특종보험 <span class="cnt" data-cnt="u3">12</span></a><a href="#u4">4. 장기손해보험 <span class="cnt" data-cnt="u4">20</span></a><a href="#u5">5. 연금저축·연금소득 과세 <span class="cnt" data-cnt="u5">6</span></a><a href="#u6">6. 퇴직연금 <span class="cnt" data-cnt="u6">9</span></a><a href="#u7">7. 자동차보험 <span class="cnt" data-cnt="u7">36</span></a><a href="#u8">8. 모집종사자·보험업법 모집 규정 <span class="cnt" data-cnt="u8">19</span></a><a href="#u9">9. 손해보험 기초이론 <span class="cnt" data-cnt="u9">12</span></a><a href="#u10">10. 보험범죄·교통법규 <span class="cnt" data-cnt="u10">10</span></a><a href="#u11">11. 손해보험의 법규와 약관 <span class="cnt" data-cnt="u11">21</span></a><a href="#u12">12. 완전판매·모집 준수사항 <span class="cnt" data-cnt="u12">13</span></a><a href="#u13">13. 제3보험 개요 <span class="cnt" data-cnt="u13">4</span></a><a href="#u14">14. 상해보험 <span class="cnt" data-cnt="u14">8</span></a><a href="#u15">15. 실손의료보험 <span class="cnt" data-cnt="u15">3</span></a><a href="#u16">16. 질병·CI·어린이·치아보험 <span class="cnt" data-cnt="u16">5</span></a><a href="#u17">17. 간병보험 <span class="cnt" data-cnt="u17">2</span></a></nav>
+  </div>
+
+  <details class="box" open><summary>🔥 시험 직전 암기 TOP 10</summary><ol><li>[화재] 폭발·파열 손해는 주택물건만 보상, 일반·공장물건은 보상 X (출제빈도 상당히 높음)</li><li>[화재·자동차] 인명특약·대인배상Ⅰ 1인당 한도: 사망 1억 5천만 / 부상 3천만 / 후유장애 1억 5천만 (자동차보험에서도 계속 사용)</li><li>[장기·법규] 영업보험료 = 순보험료(위험+저축) + 부가보험료(신계약비·유지비·수금비), 저축보험료는 특별계정 운용 (두 단원에 나오는 중요한 내용)</li><li>[연금저축] 납입 5년 이상, 가입나이 제한 없음, 연 1,800만 원, 55세 이후 수령, 소득세법 시행령, 세액공제 (버릴 게 없음)</li><li>[연금소득] 연금수령한도 = 평가액 ÷ (11 − 연금수령연차) × 120% (숫자 11·120만 기억)</li><li>[퇴직연금] 연금수령 시 퇴직소득세: 10년 이하 70%, 10년 초과~20년 이하 60%, 20년 초과 50%(2026년 신설)</li><li>[자동차] 자배법 3대 키워드: 운행자 책임주의, 조건부 무과실 책임주의, 가해자 입증책임</li><li>[자동차] 비사업용 의무보험 = 대인배상Ⅰ + 대물배상 2천만 원 이상 (사업용은 대인Ⅱ 1억 이상 추가)</li><li>[자동차] 대인배상Ⅱ: 위자료 65세 미만 8천만/이상 5천만(사실혼 배우자도 청구권자), 장례비 500만 원 정액, 휴업손해 85%, 간병비 7세 미만 최대 60일, 통원비 1일 8천 원, 가정간호비 노동능력상실률 100%</li><li>[모집종사자] 대표이사·사외이사·감사·감사위원은 모집 불가 / 중고차·수입차 판매업자는 대리점 등록 가능</li></ol></details>
+  <details class="box trap" open><summary>❌ 틀린 보기 함정 TOP 10</summary><ol><li>장례비는 500만 원 한도 내 실손 보상 → 장례 여부와 무관하게 500만 원 정액 지급(대인배상Ⅱ)</li><li>화재보험은 3일 이내에 지급한다 → 재산상 손해는 7일 이내, 3일은 사람 보험 기준</li><li>(화재보험 재산손해 보기) 도난손해 → 화재보험은 도난 보상 X, 재산손해는 직접·소방·피난손해</li><li>다중이용업소: 주유소·미술관·방송국 → 다중이용업소 아님(대표 오답)</li><li>동산종합보험 가입대상 아닌 것: 리스 물건 → 리스 물건은 가입 가능(함정)</li><li>계약전 알릴 의무 위반 시 언제든지 해지 / 대상자에 수익자 포함 → 1개월 이내 해지, 대상자는 계약자·피보험자만</li><li>계약자적립액(법정적립금)을 묻는 문제의 보기 '해약환급금' → 정답은 계약자적립액</li><li>연금저축은 19세 이상 가입 / 소득공제 → 가입나이 제한 없음, 세액공제</li><li>종합보험에 가입하면 형사책임이 면제된다 → 형사처벌 경감일 뿐 면제 아님</li><li>파산자는 5년(10년) 경과 후 등록 가능 → 기간과 무관하게 복권된 후 등록 가능(기간 나오면 전부 함정)</li></ol></details>
+
+  <main id="list">
+<section class="unit" id="u1"><h2><span>1. 화재보험</span><span class="uprog" data-prog="u1"></span></h2><ol class="items"><li class="item k-mem" data-id="1|0:00:30|암기|일반물건 예시" data-level="A" data-kind="암기" data-unit="u1">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">일반물건 예시</span></div>
+
+<div class="fact">일반물건 = 주택·공장이 아닌 모든 것(창고, 사무실, 콘도미니엄, 오피스텔, 기숙사). 시험에는 <strong>콘도·오피스텔·기숙사</strong>가 자주 출제됨.</div>
+<div class="foot"><span class="emph">“시험용으로 기억, 자주 나옴”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=30" target="_blank" rel="noopener">▶ 0:00:30</a></div>
+</div></li><li class="item k-opt" data-id="1|0:01:00|보기표현|공장 내 기숙사" data-level="A" data-kind="보기표현" data-unit="u1">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-A">A 꼭 암기</span><span class="topic">공장 내 기숙사</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「공장 내에 있는 기숙사」</div>
+<div class="fact">그냥 '기숙사'는 일반물건. 문제에 <strong>'공장 내 기숙사'</strong>로 나오면 일반물건이 아닌 <strong>공장물건</strong>으로 풀이.</div>
+<div class="foot"><span class="emph">“주의할 점, 이 글자 나오면”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=60" target="_blank" rel="noopener">▶ 0:01:00</a></div>
+</div></li><li class="item k-mem" data-id="1|0:01:00|암기|폭발·파열 보상" data-level="S" data-kind="암기" data-unit="u1">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-S">S 최우선</span><span class="topic">폭발·파열 보상</span></div>
+
+<div class="fact"><strong>폭발·파열</strong> 손해는 <strong>주택물건만 보상</strong>, <strong>일반·공장물건은 보상 X</strong>.</div>
+<div class="foot"><span class="emph">“출제빈도 상당히 높음, 꼭 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=60" target="_blank" rel="noopener">▶ 0:01:00</a></div>
+</div></li><li class="item k-mem" data-id="1|0:02:30|암기|화재보험 보상하지 않는 손해" data-level="B" data-kind="암기" data-unit="u1">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">화재보험 보상하지 않는 손해</span></div>
+
+<div class="fact">재산보험은 <strong>고의·중대한 과실 모두 면책</strong>(사람 보험은 고의만 면책). 물건 담보 보험은 <strong>분실 보상 X</strong>. 추가 암기 면책 사유: <strong>자연발열, 수도관 파열, 전기사고, 전쟁, 방사능 오염</strong>.</div>
+<div class="foot"><span class="emph">“추가적으로 외울 내용”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=150" target="_blank" rel="noopener">▶ 0:02:30</a></div>
+</div></li><li class="item k-opt" data-id="1|0:03:00|보기표현|재산손해 vs 비용손해 구분" data-level="B" data-kind="보기표현" data-unit="u1">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">재산손해 vs 비용손해 구분</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「다음 중 재산손해(비용손해)에 해당하는 것은?」</div>
+<div class="fact">끝 단어가 <strong>'손해'</strong>면 재산손해(직접·소방·피난손해), <strong>'비용'</strong>이면 비용손해(잔존물제거비용~기타협력비용). 난이도 거의 0인 구분 문제.</div>
+<div class="foot"><span class="emph">“구분 문제 나오면”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=180" target="_blank" rel="noopener">▶ 0:03:00</a></div>
+</div></li><li class="item k-trap" data-id="1|0:03:00|틀린보기|도난손해" data-level="A" data-kind="틀린보기" data-unit="u1">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">도난손해</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「도난손해」</div>
+<div class="fact">보기 4개를 모두 '~손해'로 끝나게 낼 때 자주 나오는 오답. 화재보험은 <strong>도난손해 보상 X</strong>(재산손해 = 직접·소방·피난손해).</div>
+<div class="foot"><span class="emph">“자주 나오는 오답 보기”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=180" target="_blank" rel="noopener">▶ 0:03:00</a></div>
+</div></li><li class="item k-opt" data-id="1|0:03:30|보기표현|피난손해 보상 한도" data-level="B" data-kind="보기표현" data-unit="u1">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">피난손해 보상 한도</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「피난손해는 최대 며칠 한도로 보상하는가」</div>
+<div class="fact"><strong>피난손해는 최대 5일 한도</strong> 보상.</div>
+<div class="foot"><span class="emph">“이런 문제도 나올 수 있음”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=210" target="_blank" rel="noopener">▶ 0:03:30</a></div>
+</div></li><li class="item k-mem" data-id="1|0:04:00|암기|잔존물제거비용 한도" data-level="A" data-kind="암기" data-unit="u1">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">잔존물제거비용 한도</span></div>
+
+<div class="fact">시험에 나오는 비용손해는 거의 다 <strong>잔존물제거비용</strong>. 한도 = <strong>재산손해액의 10%</strong>(예: 재산손해 5,000만 원 → 한도 500만 원).</div>
+<div class="foot"><span class="emph">“한도 외우는 게 할 일”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=240" target="_blank" rel="noopener">▶ 0:04:00</a></div>
+</div></li><li class="item k-opt" data-id="1|0:04:30|보기표현|잔존물제거비용 합계 한도" data-level="B" data-kind="보기표현" data-unit="u1">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">잔존물제거비용 합계 한도</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「재산손해액과 잔존물제거비용의 합계액은 보험가입금액 한도 내에서 보상」</div>
+<div class="fact">두 금액 합계 중 <strong>보험가입금액 초과분은 보상 X</strong>라는 뜻. 잔존물제거비용 외 나머지 비용손해는 가입금액을 초과해도 지급.</div>
+<div class="foot"><span class="emph">“이렇게 표현함”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=270" target="_blank" rel="noopener">▶ 0:04:30</a></div>
+</div></li><li class="item k-opt" data-id="1|0:05:00|보기표현|잔존물제거비용 계산문제" data-level="B" data-kind="보기표현" data-unit="u1">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">잔존물제거비용 계산문제</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「보험가액 1억 공장 전부보험, 재산손해 9,500만·잔존물제거비용 2,000만일 때 보상액은?」</div>
+<div class="fact">10% 한도 950만 원을 더하면 1억 450만 원이지만 합계액은 가입금액 1억이 한도 → 잔존물제거비용은 <strong>500만 원</strong>만 인정, 정답 <strong>총 1억 원</strong>. 1억 450만 원은 오답.</div>
+<div class="foot"><span class="emph">“계산 문제 출제 형태”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=300" target="_blank" rel="noopener">▶ 0:05:00</a></div>
+</div></li><li class="item k-trap" data-id="1|0:08:30|틀린보기|통지의무 위반 효과" data-level="B" data-kind="틀린보기" data-unit="u1">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-B">B 기억</span><span class="topic">통지의무 위반 효과</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「계약의 취소권을 행사한다」</div>
+<div class="fact">통지의무 위반을 알게 되면 보험회사는 <strong>계약 해지권</strong> 행사. '취소권'으로 나오면 틀린 보기. (배경: 화재보험 통지의무 = 건물을 <strong>30일 이상</strong> 비우거나 휴업, 구조변경·증축 등으로 <strong>15일 이상</strong> 수선 시 통지. 피보험자 나이·직업, 건물 월세는 <strong>무관</strong>)</div>
+<div class="foot"><span class="emph">“틀린 보기”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=510" target="_blank" rel="noopener">▶ 0:08:30</a></div>
+</div></li><li class="item k-opt" data-id="1|0:09:00|보기표현|손해경감의무 위반" data-level="B" data-kind="보기표현" data-unit="u1">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">손해경감의무 위반</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「경감할 수 있었던 금액을 공제(차감)하고 지급한다」</div>
+<div class="fact">손해경감의무는 119 신고·주변에 도움 요청 정도면 이행한 것으로 봄. 미이행 시 예방할 수 있었던 금액을 <strong>공제·차감하고 지급</strong> → <strong>맞는 말</strong>.</div>
+<div class="foot"><span class="emph">“맞는 말”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=540" target="_blank" rel="noopener">▶ 0:09:00</a></div>
+</div></li><li class="item k-trap" data-id="1|0:09:30|틀린보기|손해경감의무 위반" data-level="B" data-kind="틀린보기" data-unit="u1">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-B">B 기억</span><span class="topic">손해경감의무 위반</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「보험금 청구권을 상실한다」</div>
+<div class="fact">한 푼도 안 준다는 뜻이라 <strong>틀린 보기</strong>. 경감할 수 있었던 금액만 <strong>차감(공제)하고 지급</strong>.</div>
+<div class="foot"><span class="emph">“틀린 보기”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=570" target="_blank" rel="noopener">▶ 0:09:30</a></div>
+</div></li><li class="item k-mem" data-id="1|0:10:00|암기|보험금 지급기한" data-level="B" data-kind="암기" data-unit="u1">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">보험금 지급기한</span></div>
+
+<div class="fact">큰 틀: <strong>재산상 손해 7일 이내</strong>, <strong>사람 보험 3일 이내</strong> 지급. 화재보험은 재산보험이라 7일.</div>
+<div class="foot"><span class="emph">“큰 틀에서 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=600" target="_blank" rel="noopener">▶ 0:10:00</a></div>
+</div></li><li class="item k-trap" data-id="1|0:10:00|틀린보기|화재보험 지급기한" data-level="A" data-kind="틀린보기" data-unit="u1">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">화재보험 지급기한</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「화재보험은 3일 이내에 지급한다」</div>
+<div class="fact">대표적 오답 보기. 화재보험(재산상 손해)은 <strong>7일 이내</strong> 지급, 3일은 사람 보험 기준.</div>
+<div class="foot"><span class="emph">“대표적인 오답 보기”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=600" target="_blank" rel="noopener">▶ 0:10:00</a></div>
+</div></li><li class="item k-opt" data-id="1|0:10:30|보기표현|가지급금" data-level="A" data-kind="보기표현" data-unit="u1">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-A">A 꼭 암기</span><span class="topic">가지급금</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「가지급금」</div>
+<div class="fact">'가지급금'이 나오면 <strong>50%</strong>만 기억하면 정답. 지급 지연 시 <strong>추정 보험금의 50% 이내</strong> 선지급 가능.</div>
+<div class="foot"><span class="emph">“50%만 기억해도 맞힘”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=630" target="_blank" rel="noopener">▶ 0:10:30</a></div>
+</div></li><li class="item k-mem" data-id="1|0:11:30|암기|특수건물 기준" data-level="B" data-kind="암기" data-unit="u1">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">특수건물 기준</span></div>
+
+<div class="fact">특수건물은 건물주가 화재 손해배상책임보험 의무 가입, 시험은 어떤 건물이 특수건물인지 출제. <strong>상가 11층 이상, 아파트 16층 이상, 학원 바닥면적 2,000㎡ 이상, 숙박업소 바닥면적 3,000㎡ 이상</strong>까지 암기.</div>
+<div class="foot"><span class="emph">“숙박업소까지 기억해 두세요”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=690" target="_blank" rel="noopener">▶ 0:11:30</a></div>
+</div></li><li class="item k-mem" data-id="1|0:11:30|암기|다중이용업소 업종" data-level="A" data-kind="암기" data-unit="u1">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">다중이용업소 업종</span></div>
+
+<div class="fact">다중이용업소(26개 업종) 중 자주 출제: <strong>유흥주점, 영화관, PC방, 방탈출카페, 학원, 찜질방, 산후조리원, 고시원</strong>. 화재 시 빠른 대피가 어려운 곳으로 배상책임보험 의무 가입.</div>
+<div class="foot"><span class="emph">“시험에 자주 나옴”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=690" target="_blank" rel="noopener">▶ 0:11:30</a></div>
+</div></li><li class="item k-trap" data-id="1|0:12:30|틀린보기|다중이용업소가 아닌 곳" data-level="A" data-kind="틀린보기" data-unit="u1">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">다중이용업소가 아닌 곳</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「주유소, 미술관, 방송국」</div>
+<div class="fact"><strong>주유소·미술관·방송국</strong>은 다중이용업소 <strong>아님</strong>. 다중이용업소 고르기 문제의 대표 오답 보기.</div>
+<div class="foot"><span class="emph">“대표적인 오답 보기”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=750" target="_blank" rel="noopener">▶ 0:12:30</a></div>
+</div></li><li class="item k-opt" data-id="1|0:13:00|보기표현|풍수해보험 보상하지 않는 손해" data-level="B" data-kind="보기표현" data-unit="u1">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">풍수해보험 보상하지 않는 손해</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「산불」</div>
+<div class="fact">풍수해보험은 <strong>태풍·홍수·해일·대설·지진</strong> 보상. '보상하지 않는 손해'를 물으면 정답은 <strong>산불</strong>.</div>
+<div class="foot"><span class="emph">“물어볼 때 산불”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=780" target="_blank" rel="noopener">▶ 0:13:00</a></div>
+</div></li><li class="item k-mem" data-id="1|0:14:00|암기|인명특약 보상한도" data-level="S" data-kind="암기" data-unit="u1">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-S">S 최우선</span><span class="topic">인명특약 보상한도</span></div>
+
+<div class="fact">1인당 <strong>사망 1억 5천만, 부상 3천만, 후유장애 1억 5천만</strong> 한도로 가입(재산 피해는 사고당 10억). 이 세 기준은 <strong>자동차보험에서도 계속</strong> 사용.</div>
+<div class="foot"><span class="emph">“반드시 제대로 암기”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=840" target="_blank" rel="noopener">▶ 0:14:00</a></div>
+</div></li></ol></section><section class="unit" id="u2"><h2><span>2. 해상보험</span><span class="uprog" data-prog="u2"></span></h2><ol class="items"><li class="item k-mem" data-id="2|0:14:30|암기|해상보험 종류" data-level="A" data-kind="암기" data-unit="u2">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">해상보험 종류</span></div>
+
+<div class="fact">해상보험 종류 = <strong>적하보험, 선박보험, 운임보험, 선주배상책임보험</strong> 4가지. 이 4개가 <strong>아닌 것</strong>이 오답 보기로 출제. 출제 유형이 정해져 있어 종류·면책 정도만 간단히 준비.</div>
+<div class="foot"><span class="emph">“지금 바로 외워라”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=870" target="_blank" rel="noopener">▶ 0:14:30</a></div>
+</div></li><li class="item k-mem" data-id="2|0:15:00|암기|운임보험 세부조항" data-level="A" data-kind="암기" data-unit="u2">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">운임보험 세부조항</span></div>
+
+<div class="fact">어렵게 낼 때 출제. 자기 화물을 자기 선박으로 운송해 얻는 이익은 운임에 <strong>포함</strong>, <strong>생동물·갑판적 화물</strong> 운송 금액은 운임에서 <strong>제외</strong>.</div>
+<div class="foot"><span class="emph">“분홍색 표시, 꼭 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=900" target="_blank" rel="noopener">▶ 0:15:00</a></div>
+</div></li><li class="item k-mem" data-id="2|0:15:00|암기|광의·협의의 면책" data-level="B" data-kind="암기" data-unit="u2">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">광의·협의의 면책</span></div>
+
+<div class="fact">객관식이라 둘 중 하나만 암기(강사 추천은 광의). <strong>광의 = 담보위반, 항해변경, 항로변경, 항해지연</strong> / 협의 = 고의, 부패, 변질, 쥐·해충.</div>
+<div class="foot"><span class="emph">“편한 것 하나 외우기”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=900" target="_blank" rel="noopener">▶ 0:15:00</a></div>
+</div></li><li class="item k-opt" data-id="2|0:15:30|보기표현|광의 면책 판별" data-level="B" data-kind="보기표현" data-unit="u2">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">광의 면책 판별</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「담보위반 / 항로변경 / 항해지연」</div>
+<div class="fact">보기에 <strong>'담보'나 '항'</strong> 글자가 들어가 있으면 <strong>광의의 면책</strong>.</div>
+<div class="foot"><span class="emph">“담보·항 글자만 외우기”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=930" target="_blank" rel="noopener">▶ 0:15:30</a></div>
+</div></li></ol></section><section class="unit" id="u3"><h2><span>3. 특종보험</span><span class="uprog" data-prog="u3"></span></h2><ol class="items"><li class="item k-mem" data-id="3|0:16:30|암기|임의배상책임보험" data-level="B" data-kind="암기" data-unit="u3">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">임의배상책임보험</span></div>
+
+<div class="fact">의무배상책임보험은 양이 많아 시험용으로 <strong>임의배상책임보험</strong>만 암기. <strong>시설소유자, 생산물, 임원, 의사</strong> 배상책임, 두문자 <strong>'시·생·임'</strong>.</div>
+<div class="foot"><span class="emph">“시험용으로 임의배상만 외우기”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=990" target="_blank" rel="noopener">▶ 0:16:30</a></div>
+</div></li><li class="item k-mem" data-id="3|0:17:30|암기|의무배상책임 의무대상 제외" data-level="A" data-kind="암기" data-unit="u3">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">의무배상책임 의무대상 제외</span></div>
+
+<div class="fact">난이도 있게 낼 때 출제. 생활밀착형 체육시설(<strong>체육도장·태권도, 당구장, 골프연습장, 체력단련장</strong>)과 <strong>가스용기 운송자</strong>(퀵 배달)는 의무 가입 대상에서 <strong>제외</strong>.</div>
+<div class="foot"><span class="emph">“꼭 기억해 두세요”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=1050" target="_blank" rel="noopener">▶ 0:17:30</a></div>
+</div></li><li class="item k-opt" data-id="3|0:18:00|보기표현|청구기준 배상책임보험" data-level="B" data-kind="보기표현" data-unit="u3">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">청구기준 배상책임보험</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「청구기준(사고기준) 배상책임보험을 고르시오」</div>
+<div class="fact"><strong>임원배상책임보험·전문인배상책임보험 = 청구기준</strong>. 암기법 '<strong>임원은 전문님</strong>', 두 기준의 정의는 몰라도 됨.</div>
+<div class="foot"><span class="emph">“이렇게 물어봄, 외우기”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=1080" target="_blank" rel="noopener">▶ 0:18:00</a></div>
+</div></li><li class="item k-opt" data-id="3|0:19:00|보기표현|도난보험 보상하지 않는 손해" data-level="B" data-kind="보기표현" data-unit="u3">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">도난보험 보상하지 않는 손해</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「도난보험에서 보상하지 않는 손해」</div>
+<div class="fact">시험은 보상하지 않는 손해를 출제. 보관 장소를 <strong>72시간 이상</strong> 비워 둔 상태의 도난, 도난 후 <strong>30일</strong>이 지나도 발견 못 한 도난은 보상 X.</div>
+<div class="foot"><span class="emph">“시험에서 이것을 물어봄”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=1140" target="_blank" rel="noopener">▶ 0:19:00</a></div>
+</div></li><li class="item k-mem" data-id="3|0:19:30|암기|레저보험 구간보험·기간보험" data-level="A" data-kind="암기" data-unit="u3">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">레저보험 구간보험·기간보험</span></div>
+
+<div class="fact">정의보다 <strong>종목 구분</strong>(어떤 종목이 구간보험인지 기간보험인지)을 출제. <strong>낚시·스키 = 구간보험</strong>('락스로 구석구석'), 그 외 종목(골프 등)은 모두 <strong>기간보험</strong>.</div>
+<div class="foot"><span class="emph">“구간/기간 종목 구분 중요”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=1170" target="_blank" rel="noopener">▶ 0:19:30</a></div>
+</div></li><li class="item k-mem" data-id="3|0:20:00|암기|분실은 보상하지 않음" data-level="B" data-kind="암기" data-unit="u3">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">분실은 보상하지 않음</span></div>
+
+<div class="fact"><strong>레저종합보험</strong>도 분실은 <strong>절대 보상 X</strong>. 유아교육기관종합보험의 <strong>교육기관 기자재 분실</strong>, 여행자보험 휴대품 <strong>분실</strong>도 보상 X(도난은 보상). 강사가 '분실은 언제나 보상 안 된다 그랬죠?'로 원칙을 반복(암기·출제 신호는 아님).</div>
+<div class="foot"><span class="emph">“원칙 반복(그랬죠?)”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=1200" target="_blank" rel="noopener">▶ 0:20:00</a></div>
+</div></li><li class="item k-opt" data-id="3|0:20:30|보기표현|유아교육기관종합보험 보육교사" data-level="B" data-kind="보기표현" data-unit="u3">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">유아교육기관종합보험 보육교사</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「보육교사도 보상되는가」</div>
+<div class="fact">'보육교사는 보상되냐 안 되냐' 문제 출제. 보육교사는 <strong>특약으로 가입 가능</strong>(피보험자는 유아원생).</div>
+<div class="foot"><span class="emph">“이런 문제가 나온다”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=1230" target="_blank" rel="noopener">▶ 0:20:30</a></div>
+</div></li><li class="item k-opt" data-id="3|0:21:00|보기표현|동산종합보험 가입대상 아닌 것" data-level="B" data-kind="보기표현" data-unit="u3">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">동산종합보험 가입대상 아닌 것</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「특정 / 자동차·선박·항공기 / 동물·식물 / 공장 내 장치된 기계」</div>
+<div class="fact"><strong>가입대상이 아닌 것</strong>을 묻는 문제로 출제. <strong>'특정' 글자</strong>가 붙으면 전부 대상 아님. <strong>자동차·선박·항공기, 동물·식물, 공장 내에 장치된 기계</strong>도 가입대상 제외.</div>
+<div class="foot"><span class="emph">“가입대상 아닌 것 출제”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=1260" target="_blank" rel="noopener">▶ 0:21:00</a></div>
+</div></li><li class="item k-trap" data-id="3|0:22:00|틀린보기|동산종합보험 리스 물건 함정" data-level="A" data-kind="틀린보기" data-unit="u3">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">동산종합보험 리스 물건 함정</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「리스 물건」</div>
+<div class="fact">'가입대상이 아닌 것은?' 문제에 <strong>리스 물건</strong>이 함정 보기로 출제. 빌려 쓰는 <strong>리스 물건은 가입 가능</strong> → 가입대상 아닌 것으로 고르면 틀림.</div>
+<div class="foot"><span class="emph">“함정으로 리스 물건”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=1320" target="_blank" rel="noopener">▶ 0:22:00</a></div>
+</div></li><li class="item k-opt" data-id="3|0:23:00|보기표현|여행자보험 휴대품 손해 한도" data-level="B" data-kind="보기표현" data-unit="u3">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">여행자보험 휴대품 손해 한도</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「휴대품 손해 보험금은 회사별로 상이한 한도 적용」</div>
+<div class="fact">예전엔 회사별 휴대품 손해 한도가 통일, 현재는 <strong>회사별로 상이한(다른) 한도</strong> 적용 → <strong>올바른 설명</strong>. 휴대품 <strong>도난</strong>은 보상, <strong>분실</strong>은 보상 X.</div>
+<div class="foot"><span class="emph">“올바른 설명”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=1380" target="_blank" rel="noopener">▶ 0:23:00</a></div>
+</div></li><li class="item k-opt" data-id="3|0:23:30|보기표현|컨틴전시 보험 키워드" data-level="B" data-kind="보기표현" data-unit="u3">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">컨틴전시 보험 키워드</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「날씨, 스포츠」</div>
+<div class="fact">보기에 <strong>날씨·스포츠</strong> 글자가 보이면 <strong>컨틴전시 보험</strong> 선택. 종류: 스포츠 시상 보험, 날씨 보험, 행사 취소 보상 보험.</div>
+<div class="foot"><span class="emph">“이런 글자 보면 골라라”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=1410" target="_blank" rel="noopener">▶ 0:23:30</a></div>
+</div></li><li class="item k-opt" data-id="3|0:23:30|보기표현|컨틴전시 보험 종류 아닌 것" data-level="B" data-kind="보기표현" data-unit="u3">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">컨틴전시 보험 종류 아닌 것</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「복권 보험」</div>
+<div class="fact">'컨틴전시 보험의 종류가 <strong>아닌</strong> 것은?'의 대표 정답 = <strong>복권 보험</strong>.</div>
+<div class="foot"><span class="emph">“대표적인 아닌 종류”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=1410" target="_blank" rel="noopener">▶ 0:23:30</a></div>
+</div></li></ol></section><section class="unit" id="u4"><h2><span>4. 장기손해보험</span><span class="uprog" data-prog="u4"></span></h2><ol class="items"><li class="item k-trap" data-id="4|0:24:00|틀린보기|장기손해보험 특징" data-level="B" data-kind="틀린보기" data-unit="u4">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-B">B 기억</span><span class="topic">장기손해보험 특징</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「1년마다 보험료가 갱신된다」</div>
+<div class="fact">장기손해보험은 <strong>보험기간 3년 이상</strong>, 보장성은 <strong>100세 만기</strong>까지·순수보장성 판매 가능, 저축성은 <strong>보험기간 15년 이내</strong>만 개발 가능. '1년마다 보험료 갱신'은 <strong>틀린 보기</strong>.</div>
+<div class="foot"><span class="emph">“틀림 보기로 나온다”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=1440" target="_blank" rel="noopener">▶ 0:24:00</a></div>
+</div></li><li class="item k-mem" data-id="4|0:25:00|암기|특별계정 운용 대상" data-level="A" data-kind="암기" data-unit="u4">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">특별계정 운용 대상</span></div>
+
+<div class="fact"><strong>특별계정</strong> 운용 대상 3가지: <strong>장기손해보험의 저축보험료, 연금저축, 퇴직연금</strong>.</div>
+<div class="foot"><span class="emph">“단순하게 외워 버립시다”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=1500" target="_blank" rel="noopener">▶ 0:25:00</a></div>
+</div></li><li class="item k-trap" data-id="4|0:25:00|틀린보기|특별계정 운용 범위" data-level="B" data-kind="틀린보기" data-unit="u4">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-B">B 기억</span><span class="topic">특별계정 운용 범위</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「장기손해보험에 납입하는 전체 보험료를 특별계정에서 운용한다」</div>
+<div class="fact">전체 보험료가 아니라 <strong>저축보험료만</strong> 특별계정에서 운용. '전체 보험료를 특별계정에서 운용'은 <strong>틀린 보기</strong>.</div>
+<div class="foot"><span class="emph">“틀린 보기가 된다”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=1500" target="_blank" rel="noopener">▶ 0:25:00</a></div>
+</div></li><li class="item k-trap" data-id="4|0:26:00|틀린보기|계약전 알릴 의무 위반 해지" data-level="A" data-kind="틀린보기" data-unit="u4">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">계약전 알릴 의무 위반 해지</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「언제든지 해지할 수 있다」</div>
+<div class="fact">계약자·피보험자가 <strong>고의 또는 중대한 과실</strong>로 위반하면 회사는 <strong>1개월 이내</strong> <strong>해지</strong>(무효·취소 아님) 가능, 해지 시 <strong>해약환급금 지급</strong>. '언제든지 해지할 수 있다'는 <strong>틀린 보기</strong>.</div>
+<div class="foot"><span class="emph">“오답 보기 꼭 눈에 익혀”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=1560" target="_blank" rel="noopener">▶ 0:26:00</a></div>
+</div></li><li class="item k-trap" data-id="4|0:26:00|틀린보기|계약전 알릴 의무 대상자" data-level="A" data-kind="틀린보기" data-unit="u4">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">계약전 알릴 의무 대상자</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「수익자」</div>
+<div class="fact">계약전 알릴 의무 대상자 = <strong>계약자·피보험자</strong>, <strong>수익자는 대상 아님</strong>. 수익자를 포함하면 틀린 보기.</div>
+<div class="foot"><span class="emph">“오답 보기로 자주 나옴”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=1560" target="_blank" rel="noopener">▶ 0:26:00</a></div>
+</div></li><li class="item k-mem" data-id="4|0:26:30|암기|자동복원제도" data-level="B" data-kind="암기" data-unit="u4">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">자동복원제도</span></div>
+
+<div class="fact">보험기간 3년 이상(장기) 화재보험에서 1회 지급 보험금이 <strong>보험가입금액의 80% 미만</strong>이면 <strong>최초 보험가입금액까지 자동 복원</strong>.</div>
+<div class="foot"><span class="emph">“기억해 주시면 되고”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=1590" target="_blank" rel="noopener">▶ 0:26:30</a></div>
+</div></li><li class="item k-trap" data-id="4|0:27:00|틀린보기|자동복원제도 기준" data-level="B" data-kind="틀린보기" data-unit="u4">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-B">B 기억</span><span class="topic">자동복원제도 기준</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「보험가액의 80%」</div>
+<div class="fact">기준은 <strong>보험가입금액</strong>의 80% 미만. '보험가액의 80%'로 나오면 <strong>틀린 보기</strong>.</div>
+<div class="foot"><span class="emph">“나오면 틀림 보기”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=1620" target="_blank" rel="noopener">▶ 0:27:00</a></div>
+</div></li><li class="item k-trap" data-id="4|0:27:30|틀린보기|납입최고기간 해지 시점" data-level="B" data-kind="틀린보기" data-unit="u4">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-B">B 기억</span><span class="topic">납입최고기간 해지 시점</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「최고기간이 끝나는 날 계약이 해지된다」</div>
+<div class="fact"><strong>2회 이후</strong> 보험료 미납 시 <strong>14일 이상</strong> 납입최고(독촉)기간, 끝나는 날까지 보장, <strong>끝나는 날의 다음 날</strong> 해지. '끝나는 날 해지'는 틀림, '끝나는 날의 다음 날 해지'가 <strong>맞는 보기</strong>.</div>
+<div class="foot"><span class="emph">“틀린 보기/맞는 보기”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=1650" target="_blank" rel="noopener">▶ 0:27:30</a></div>
+</div></li><li class="item k-trap" data-id="4|0:28:00|틀린보기|보험료 미납 시 일부 보장 제한" data-level="B" data-kind="틀린보기" data-unit="u4">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-B">B 기억</span><span class="topic">보험료 미납 시 일부 보장 제한</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「미납 시 일부 보장의 제한이 가능하다」</div>
+<div class="fact">미납 시에는 계약을 <strong>해지하거나 안 하거나</strong> 둘 중 하나만 가능. '일부 보장만 제한'은 <strong>틀린 보기</strong>.</div>
+<div class="foot"><span class="emph">“틀린 보기가 된다”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=1680" target="_blank" rel="noopener">▶ 0:28:00</a></div>
+</div></li><li class="item k-trap" data-id="4|0:29:00|틀린보기|보험계약 부활 고지" data-level="B" data-kind="틀린보기" data-unit="u4">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-B">B 기억</span><span class="topic">보험계약 부활 고지</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「최초 신계약 때 고지한 내용으로 대체(갈음)할 수 있다」</div>
+<div class="fact">미납 해지 후 해약환급금을 받지 않았으면 <strong>3년 이내</strong> 부활 가능. <strong>연체보험료+연체이자</strong> 납입, <strong>신계약과 동일한 절차</strong>(부활 시점 계약전 알릴 의무 이행) 후 <strong>회사 승인</strong>(역선택 방지). 최초 고지로 대체·갈음은 틀림 → <strong>부활 시점의 현재 상태</strong> 고지.</div>
+<div class="foot"><span class="emph">“틀린 보기가 된다”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=1740" target="_blank" rel="noopener">▶ 0:29:00</a></div>
+</div></li><li class="item k-mem" data-id="4|0:29:30|암기|청약철회 기간" data-level="B" data-kind="암기" data-unit="u4">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">청약철회 기간</span></div>
+
+<div class="fact">원칙: <strong>보험증권을 받은 날부터 15일 이내</strong> 철회 가능. <strong>청약일부터 30일</strong> 초과 시 철회 불가(증권을 일부러 늦게 받는 악용 방지).</div>
+<div class="foot"><span class="emph">“이렇게 암기해 주세요”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=1770" target="_blank" rel="noopener">▶ 0:29:30</a></div>
+</div></li><li class="item k-opt" data-id="4|0:30:00|보기표현|청약철회 보험료 반환" data-level="B" data-kind="보기표현" data-unit="u4">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">청약철회 보험료 반환</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「며칠 이내에 보험료를 반환하는가」</div>
+<div class="fact">청약철회 시 회사가 며칠 이내에 보험료를 돌려주는지 물으면 <strong>3영업일 이내</strong> 반환(자막 '사명업일').</div>
+<div class="foot"><span class="emph">“이렇게 물으면 답”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=1800" target="_blank" rel="noopener">▶ 0:30:00</a></div>
+</div></li><li class="item k-opt" data-id="4|0:30:00|보기표현|청구 가능 기간" data-level="B" data-kind="보기표현" data-unit="u4">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">청구 가능 기간</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「보험금, 해약환급금, 보험료 반환」</div>
+<div class="fact">청구 가능 기간(몇 년 이내)을 출제. <strong>보험금·해약환급금·보험료 반환</strong>이라는 말이 나오면 <strong>3년</strong>, 회사가 고객에게 청구하는 <strong>보험료</strong>는 <strong>2년</strong>.</div>
+<div class="foot"><span class="emph">“이런 말 나오면 3년”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=1800" target="_blank" rel="noopener">▶ 0:30:00</a></div>
+</div></li><li class="item k-mem" data-id="4|0:30:30|암기|청구권 기간 암기법" data-level="B" data-kind="암기" data-unit="u4">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">청구권 기간 암기법</span></div>
+
+<div class="fact"><strong>'금'(보험금·해약환급금)이나 '반환'은 3년, '료'(보험료)는 2년</strong>.</div>
+<div class="foot"><span class="emph">“이렇게 암기해 주세요”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=1830" target="_blank" rel="noopener">▶ 0:30:30</a></div>
+</div></li><li class="item k-opt" data-id="4|0:30:30|보기표현|보험료 용어" data-level="B" data-kind="보기표현" data-unit="u4">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">보험료 용어</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「영업보험료 / 납입보험료」</div>
+<div class="fact">매월 내는 전체 보험료(계약자가 납입한 보험료)를 시험 문제에서는 <strong>영업보험료</strong> 또는 <strong>납입보험료</strong>로 표현(영업보험료 = 순보험료 + 부가보험료). (1:53:30 법규 단원에서도 같은 내용 반복)</div>
+<div class="foot"><span class="emph">“시험 문제 표현”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=1830" target="_blank" rel="noopener">▶ 0:30:30</a></div>
+</div></li><li class="item k-mem" data-id="4|0:31:30|암기|보험료의 구성" data-level="S" data-kind="암기" data-unit="u4">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-S">S 최우선</span><span class="topic">보험료의 구성</span></div>
+
+<div class="fact">영업보험료 = <strong>순보험료</strong>(위험보험료 + 저축보험료) + <strong>부가보험료</strong>(사업비: <strong>신계약비·유지비·수금비</strong>). 순보험료 안의 <strong>저축보험료는 특별계정</strong>에서 운용. (1:53:00 법규 단원에서 '두 번 나오는 중요한 내용'으로 재강조)</div>
+<div class="foot"><span class="emph">“별표 여러 개, 두 번 나옴”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=1890" target="_blank" rel="noopener">▶ 0:31:30</a></div>
+</div></li><li class="item k-opt" data-id="4|0:32:00|보기표현|예정기초율 출제 형태" data-level="B" data-kind="보기표현" data-unit="u4">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">예정기초율 출제 형태</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「예정위험률(예정이율)이 오르면 보험료는?」</div>
+<div class="fact">기본 문제는 예정기초율 <strong>3가지(예정위험률·예정이율·예정사업비율)</strong> 출제, 난이도를 올리면 각 비율이 <strong>오르내릴 때 보험료 변화</strong>를 출제.</div>
+<div class="foot"><span class="emph">“이런 형태로 출제”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=1920" target="_blank" rel="noopener">▶ 0:32:00</a></div>
+</div></li><li class="item k-mem" data-id="4|0:32:30|암기|예정이율과 보험료 방향" data-level="A" data-kind="암기" data-unit="u4">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">예정이율과 보험료 방향</span></div>
+
+<div class="fact">예정위험률·예정사업비율은 보험료와 <strong>같은 방향</strong>, <strong>예정이율만 반대</strong>(예정이율 ↑ → 보험료 ↓, 예정이율 ↓ → 보험료 ↑).</div>
+<div class="foot"><span class="emph">“꼭 기억해 주세요”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=1950" target="_blank" rel="noopener">▶ 0:32:30</a></div>
+</div></li><li class="item k-opt" data-id="4|0:32:30|보기표현|계약자적립액 정의" data-level="B" data-kind="보기표현" data-unit="u4">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">계약자적립액 정의</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「보험회사가 책임 이행을 위해 반드시 적립하는 법정적립금」</div>
+<div class="fact">설명을 주고 무엇인지 묻는 형태. '책임 이행을 위해 반드시 적립하는 <strong>법정적립금</strong>' → <strong>계약자적립액</strong>(평준보험료에서 자연식 위험보험료를 뺀 차액을 적립). 근거 법률은 <strong>보험업법</strong>.</div>
+<div class="foot"><span class="emph">“설명 주고 물어본다”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=1950" target="_blank" rel="noopener">▶ 0:32:30</a></div>
+</div></li><li class="item k-trap" data-id="4|0:33:30|틀린보기|계약자적립액 vs 해약환급금" data-level="A" data-kind="틀린보기" data-unit="u4">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">계약자적립액 vs 해약환급금</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「해약환급금」</div>
+<div class="fact">계약자적립액을 묻는 문제에 <strong>해약환급금</strong>이 틀린 보기로 자주 출제. 정답은 <strong>계약자적립액</strong>.</div>
+<div class="foot"><span class="emph">“자주 나오니 꼭 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=2010" target="_blank" rel="noopener">▶ 0:33:30</a></div>
+</div></li></ol></section><section class="unit" id="u5"><h2><span>5. 연금저축·연금소득 과세</span><span class="uprog" data-prog="u5"></span></h2><ol class="items"><li class="item k-mem" data-id="5|0:34:00|암기|연금저축 납입 조건" data-level="S" data-kind="암기" data-unit="u5">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-S">S 최우선</span><span class="topic">연금저축 납입 조건</span></div>
+
+<div class="fact">납입기간 <strong>5년 이상</strong>, 가입나이 <strong>제한 없음</strong>, 납입한도 <strong>연 1,800만 원</strong>, 연금수령 <strong>55세 이후</strong>, 관련 법률 <strong>소득세법 시행령</strong>, 공제방법 <strong>세액공제</strong>.</div>
+<div class="foot"><span class="emph">“하나도 버릴 게 없음”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=2040" target="_blank" rel="noopener">▶ 0:34:00</a></div>
+</div></li><li class="item k-trap" data-id="5|0:34:30|틀린보기|연금저축 가입나이" data-level="A" data-kind="틀린보기" data-unit="u5">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">연금저축 가입나이</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「19세 이상부터 가입이 가능하다」</div>
+<div class="fact">연금저축은 <strong>가입나이 제한 없음</strong>. '19세 이상부터 가입'은 <strong>틀린 보기</strong>.</div>
+<div class="foot"><span class="emph">“틀림 보기”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=2070" target="_blank" rel="noopener">▶ 0:34:30</a></div>
+</div></li><li class="item k-trap" data-id="5|0:34:30|틀린보기|연금저축 공제방법" data-level="A" data-kind="틀린보기" data-unit="u5">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">연금저축 공제방법</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「소득공제 혜택이 있다」</div>
+<div class="fact">연금저축은 <strong>세액공제</strong>. 세액공제가 아닌 '소득공제'는 <strong>틀린 보기</strong>.</div>
+<div class="foot"><span class="emph">“틀림 보기”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=2070" target="_blank" rel="noopener">▶ 0:34:30</a></div>
+</div></li><li class="item k-opt" data-id="5|0:36:00|보기표현|지방소득세 포함 세율" data-level="B" data-kind="보기표현" data-unit="u5">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">지방소득세 포함 세율</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「지방소득세 포함」</div>
+<div class="fact">강의 세율·공제율은 <strong>지방소득세 제외</strong> 기준. 문제가 지방소득세 포함으로 물으면 <strong>10% 가산</strong>: 12% → <strong>13.2%</strong>, 15% → <strong>16.5%</strong>. 포함/제외 여부를 질문에 맞춰 풀이.</div>
+<div class="foot"><span class="emph">“포함해 물어볼 수 있음”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=2160" target="_blank" rel="noopener">▶ 0:36:00</a></div>
+</div></li><li class="item k-trap" data-id="5|0:38:00|틀린보기|연금소득 1,500만 원 초과" data-level="B" data-kind="틀린보기" data-unit="u5">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-B">B 기억</span><span class="topic">연금소득 1,500만 원 초과</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「1,500만 원 초과 시 무조건 종합과세한다 / 무조건 15% 분리과세한다」</div>
+<div class="fact">연금소득 <strong>연 1,500만 원 초과</strong> 시 <strong>15% 분리과세와 종합과세 중 선택</strong> 가능(다른 소득 있으면 15%, 없으면 종합과세가 유리할 수 있음). '무조건 종합과세', '무조건 15% 분리과세' 모두 <strong>틀린 보기</strong>. (1,500만 원 이하는 3~5% 저율 분리과세)</div>
+<div class="foot"><span class="emph">“틀림 보기”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=2280" target="_blank" rel="noopener">▶ 0:38:00</a></div>
+</div></li><li class="item k-mem" data-id="5|0:38:30|암기|연금수령한도 공식" data-level="S" data-kind="암기" data-unit="u5">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-S">S 최우선</span><span class="topic">연금수령한도 공식</span></div>
+
+<div class="fact">공식만 출제되므로 숫자 <strong>11과 120</strong> 두 개만 기억. 연금수령한도 = 연금계좌 평가액 ÷ (<strong>11</strong> − 연금수령연차) × <strong>120%</strong>. (분리과세 요건: 55세 이후, 가입일부터 5년 경과, 연간 수령한도 내)</div>
+<div class="foot"><span class="emph">“두 숫자만 기억하면 됨”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=2310" target="_blank" rel="noopener">▶ 0:38:30</a></div>
+</div></li></ol></section><section class="unit" id="u6"><h2><span>6. 퇴직연금</span><span class="uprog" data-prog="u6"></span></h2><ol class="items"><li class="item k-opt" data-id="6|0:39:30|보기표현|퇴직연금 근거 법령" data-level="B" data-kind="보기표현" data-unit="u6">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">퇴직연금 근거 법령</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「근로자퇴직급여 보장법·시행령·시행규칙」</div>
+<div class="fact">퇴직연금 관련 법을 물으면 <strong>'퇴직' 또는 '근로자'</strong>라는 단어가 들어간 법 선택. 문제에 <strong>근로자퇴직급여 보장법·시행령·시행규칙</strong>이 나오면 모두 <strong>같은 의미(법령)</strong>. 법령 = 국회의 법률 + 행정부의 시행령·시행규칙.</div>
+<div class="foot"><span class="emph">“퇴직·근로자 들어간 법 고르기”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=2370" target="_blank" rel="noopener">▶ 0:39:30</a></div>
+</div></li><li class="item k-opt" data-id="6|0:41:00|보기표현|확정급여형(DB) 시험 표현" data-level="B" data-kind="보기표현" data-unit="u6">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">확정급여형(DB) 시험 표현</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「근로자의 퇴직급여는 사전에 확정되어 있다」</div>
+<div class="fact">DB형은 시험에서 '근로자의 퇴직금은 <strong>사전에 확정</strong>되어 있다'로 표현. 근로자는 금융기관 수익률과 무관하게 <strong>급여 × 근속연수</strong> 수령, 수익률에 따라 달라지는 것은 <strong>사용자 부담분</strong>.</div>
+<div class="foot"><span class="emph">“시험용 표현”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=2460" target="_blank" rel="noopener">▶ 0:41:00</a></div>
+</div></li><li class="item k-opt" data-id="6|0:41:00|보기표현|사장님 = 사용자" data-level="B" data-kind="보기표현" data-unit="u6">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">사장님 = 사용자</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「사용자」</div>
+<div class="fact">시험에서는 '사장님' 대신 <strong>사용자</strong>로 표기. 강의에서 함께 쓰인 용어: <strong>가입자 = 근로자</strong>, <strong>(퇴직연금)사업자 = 퇴직연금을 판매하는 금융기관</strong>.</div>
+<div class="foot"><span class="emph">“시험엔 '사용자'로 나옴”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=2460" target="_blank" rel="noopener">▶ 0:41:00</a></div>
+</div></li><li class="item k-opt" data-id="6|0:41:30|보기표현|IRP 가입 대상" data-level="A" data-kind="보기표현" data-unit="u6">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-A">A 꼭 암기</span><span class="topic">IRP 가입 대상</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「개인형 퇴직연금은 누구나 가입 가능」</div>
+<div class="fact">IRP는 현재 기준 <strong>누구나 가입 가능</strong>이 정답. 예전엔 가입 제한이 있었지만 지금은 <strong>군인·공무원·1년 미만 단기근로자</strong>도 모두 가입 가능.</div>
+<div class="foot"><span class="emph">“'누구나 가입 가능'이 답”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=2490" target="_blank" rel="noopener">▶ 0:41:30</a></div>
+</div></li><li class="item k-mem" data-id="6|0:42:00|암기|퇴직계좌 인출 순서" data-level="A" data-kind="암기" data-unit="u6">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">퇴직계좌 인출 순서</span></div>
+
+<div class="fact">개념은 깊이 몰라도 됨(손해보험 시험에서는 에너지 낭비), <strong>인출 순서만</strong> 암기: <strong>① 과세제외 금액 → ② 이연퇴직소득 → ③ 그 밖의 금액</strong>.</div>
+<div class="foot"><span class="emph">“인출 순서만 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=2520" target="_blank" rel="noopener">▶ 0:42:00</a></div>
+</div></li><li class="item k-mem" data-id="6|0:43:00|암기|연금수령 시 퇴직소득세 감면" data-level="S" data-kind="암기" data-unit="u6">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-S">S 최우선</span><span class="topic">연금수령 시 퇴직소득세 감면</span></div>
+
+<div class="fact">퇴직금을 연금으로 받으면 일시금 세율에 아래 비율만 적용: <strong>10년 이하 70%</strong>, <strong>10년 초과~20년 이하 60%</strong>, <strong>20년 초과 50%</strong>. <strong>20년 초과(50%) 구간은 2026년 신설</strong>.</div>
+<div class="foot"><span class="emph">“26년 신설, 반드시 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=2580" target="_blank" rel="noopener">▶ 0:43:00</a></div>
+</div></li><li class="item k-mem" data-id="6|0:43:00|암기|퇴직연금 판매 불가 기관" data-level="B" data-kind="암기" data-unit="u6">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">퇴직연금 판매 불가 기관</span></div>
+
+<div class="fact">판매 가능: 보험회사, 은행, 금융투자회사, <strong>근로복지공단</strong>. 시험용으로는 <strong>판매 불가 기관</strong> 암기: <strong>저축은행, 우체국, 국민연금관리공단</strong>.</div>
+<div class="foot"><span class="emph">“판매 불가 기관 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=2580" target="_blank" rel="noopener">▶ 0:43:00</a></div>
+</div></li><li class="item k-mem" data-id="6|0:44:30|암기|중도인출" data-level="A" data-kind="암기" data-unit="u6">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">중도인출</span></div>
+
+<div class="fact"><strong>DB형은 중도인출 불가</strong>(사용자가 책임지는 돈). <strong>DC형</strong>은 <strong>무주택자 주택 구입, 전세자금, 6개월 이상 요양</strong> 등의 경우에만 인출 가능. 퇴직연금 한 페이지는 중요한 것만 뽑은 것이라 꼭 기억하라고 강조.</div>
+<div class="foot"><span class="emph">“중요한 것만 뽑음, 꼭 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=2670" target="_blank" rel="noopener">▶ 0:44:30</a></div>
+</div></li><li class="item k-mem" data-id="6|0:44:30|암기|퇴직연금 페이지 나머지 핵심" data-level="B" data-kind="암기" data-unit="u6">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">퇴직연금 페이지 나머지 핵심</span></div>
+
+<div class="fact">(페이지 전체 '꼭 기억') 현재 <strong>전체 사업장</strong>이 퇴직연금 가입 의무화 대상(도입 초기 5인 이상). 퇴직금은 <strong>연금 또는 일시금</strong>으로 수령 가능. DC형 사용자는 <strong>월급의 1/12</strong>을 매월 납입. 사용자는 <strong>매년 1회 이상</strong> 가입자 교육 의무, 퇴직연금사업자에게 <strong>위탁 가능</strong>.</div>
+<div class="foot"><span class="emph">“한 페이지 전부 꼭 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=2670" target="_blank" rel="noopener">▶ 0:44:30</a></div>
+</div></li></ol></section><section class="unit" id="u7"><h2><span>7. 자동차보험</span><span class="uprog" data-prog="u7"></span></h2><ol class="items"><li class="item k-mem" data-id="7|0:46:00|암기|자배법 3대 키워드" data-level="S" data-kind="암기" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-S">S 최우선</span><span class="topic">자배법 3대 키워드</span></div>
+
+<div class="fact">민법의 특별법인 <strong>자동차손해배상보장법</strong>이 나오면 세 가지만 기억: <strong>운행자 책임주의</strong>(운행자 = 차량 소유주, 실제 운전자와 구별), <strong>조건부 무과실 책임주의</strong>, <strong>가해자 입증책임</strong>.</div>
+<div class="foot"><span class="emph">“세 가지만 알면 무난”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=2760" target="_blank" rel="noopener">▶ 0:46:00</a></div>
+</div></li><li class="item k-mem" data-id="7|0:46:30|암기|피해자 직접청구권" data-level="A" data-kind="암기" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">피해자 직접청구권</span></div>
+
+<div class="fact">일반 보험은 피보험자·수익자가 보험금 청구. 자동차보험은 <strong>상대방인 피해자가 보험금을 직접 청구</strong> 가능(피해자 청구권) — 매우 특이한 점.</div>
+<div class="foot"><span class="emph">“꼭 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=2790" target="_blank" rel="noopener">▶ 0:46:30</a></div>
+</div></li><li class="item k-mem" data-id="7|0:47:00|암기|반의사불벌 특례 제외 사고" data-level="B" data-kind="암기" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">반의사불벌 특례 제외 사고</span></div>
+
+<div class="fact">반의사불벌 특례 = 피해자가 원하지 않으면 처벌하지 않는 제도. 단 <strong>사망, 뺑소니, 중상해, 어린이보호구역 사고, 12대 중과실 위반 사고</strong>는 특례 제외 → 합의해도 처벌.</div>
+<div class="foot"><span class="emph">“기억해 주세요”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=2820" target="_blank" rel="noopener">▶ 0:47:00</a></div>
+</div></li><li class="item k-trap" data-id="7|0:47:30|틀린보기|종합보험과 형사책임" data-level="A" data-kind="틀린보기" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">종합보험과 형사책임</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「종합보험에 가입하면 형사책임이 면제된다」</div>
+<div class="fact">종합보험 가입 시 형사처벌은 <strong>경감</strong>일 뿐 <strong>면제 아님</strong>. '면제'로 나오면 틀린 보기. (형사책임 비용은 운전자보험 영역, 강사는 시험에 안 나온다고 언급)</div>
+<div class="foot"><span class="emph">“'면제'는 틀린 보기”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=2850" target="_blank" rel="noopener">▶ 0:47:30</a></div>
+</div></li><li class="item k-opt" data-id="7|0:48:30|보기표현|대인배상Ⅰ 한도" data-level="B" data-kind="보기표현" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">대인배상Ⅰ 한도</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「대인배상Ⅰ 사고당 보상한도」</div>
+<div class="fact">대인배상Ⅰ 한도 = 화재보험 신체손해배상책임특약과 동일: 사망 <strong>1억 5천만 원</strong>, 부상 <strong>3천만 원</strong>, 후유장애 <strong>1억 5천만 원</strong>. <strong>1인당</strong>으로 물으면 한도 내 <strong>유한</strong>, <strong>사고당</strong>으로 물으면 <strong>무한</strong>(10명이 다쳐도 각자 보상).</div>
+<div class="foot"><span class="emph">“사고당으로 물으면 무한”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=2910" target="_blank" rel="noopener">▶ 0:48:30</a></div>
+</div></li><li class="item k-mem" data-id="7|0:50:00|암기|비사업용 의무보험 기준" data-level="S" data-kind="암기" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-S">S 최우선</span><span class="topic">비사업용 의무보험 기준</span></div>
+
+<div class="fact">시험은 <strong>의무보험 범위</strong>를 출제. <strong>비사업용 = 대인배상Ⅰ + 대물배상 2천만 원 이상</strong>. 사업용은 여기에 <strong>대인배상Ⅱ 1억 원 이상</strong> 추가. 시험용으로는 비사업용 기준 암기.</div>
+<div class="foot"><span class="emph">“비사업용 기준 반드시 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=3000" target="_blank" rel="noopener">▶ 0:50:00</a></div>
+</div></li><li class="item k-opt" data-id="7|0:50:30|보기표현|자기신체사고 면책 단어" data-level="B" data-kind="보기표현" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">자기신체사고 면책 단어</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「고의 / (경기)·연습 / 전쟁」</div>
+<div class="fact">자기신체사고는 실제 손해 한도 내 보상. <strong>고의</strong> 사고는 절대 보상 X. <strong>경기·연습·전쟁</strong> 같은 단어가 나와도 보상 대상 아님. (자막 '계속 반복'은 '경기' 오인식으로 추정, 약관상 면책 사유는 '경기 또는 경기를 위한 연습')</div>
+<div class="foot"><span class="emph">“이런 단어 나오면 보상X”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=3030" target="_blank" rel="noopener">▶ 0:50:30</a></div>
+</div></li><li class="item k-opt" data-id="7|0:51:00|보기표현|무보험차상해 가입 조건" data-level="B" data-kind="보기표현" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">무보험차상해 가입 조건</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「무보험차상해 가입 조건」</div>
+<div class="fact">가입 조건 출제. <strong>대인배상Ⅰ, 대인배상Ⅱ, 대물배상, 자기신체사고 4개 모두 가입</strong>해야 무보험차상해 가입 가능. 무보험차상해에 가입해야 <strong>다른자동차 운전담보 특약</strong>도 가입 가능.</div>
+<div class="foot"><span class="emph">“가입 조건을 물어봄”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=3060" target="_blank" rel="noopener">▶ 0:51:00</a></div>
+</div></li><li class="item k-opt" data-id="7|0:54:00|보기표현|의무보험 가입 비대상" data-level="B" data-kind="보기표현" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">의무보험 가입 비대상</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「의무보험 가입 대상이 아닌 것」</div>
+<div class="fact">가입 대상이 <strong>아닌</strong> 것 출제: <strong>도로가 아닌 곳에서 운행하는 자동차</strong>, <strong>미합중국 군대의 자동차</strong>, <strong>무한궤도식 건설기계</strong>. 반면 승용·승합·화물·이륜자동차, <strong>50cc 미만 이륜차</strong>, <strong>9종 건설기계</strong>는 가입 대상.</div>
+<div class="foot"><span class="emph">“대상 아닌 것을 물어봄”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=3240" target="_blank" rel="noopener">▶ 0:54:00</a></div>
+</div></li><li class="item k-mem" data-id="7|0:55:30|암기|의무보험 미가입 차량 운행 처벌" data-level="B" data-kind="암기" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">의무보험 미가입 차량 운행 처벌</span></div>
+
+<div class="fact">의무보험 미가입 자체는 <strong>과태료</strong>. 미가입 차량을 <strong>운행</strong>하면 형사처벌 → <strong>1년 이하 징역 또는 1천만 원 이하 벌금</strong>.</div>
+<div class="foot"><span class="emph">“알아두세요”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=3330" target="_blank" rel="noopener">▶ 0:55:30</a></div>
+</div></li><li class="item k-mem" data-id="7|0:56:00|암기|자동차 구분: 승용 중형" data-level="A" data-kind="암기" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">자동차 구분: 승용 중형</span></div>
+
+<div class="fact">자동차 구분은 자주 나오는 것만 정리, 꼭 기억. 승용차는 <strong>중형만</strong> 출제, 배기량 <strong>1,600cc 초과 ~ 2,000cc 이하</strong> = 중형. 오토바이는 승용이 아니라 <strong>이륜자동차</strong>.</div>
+<div class="foot"><span class="emph">“자주 나옴, 꼭 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=3360" target="_blank" rel="noopener">▶ 0:56:00</a></div>
+</div></li><li class="item k-mem" data-id="7|0:56:30|암기|1종 승합자동차" data-level="A" data-kind="암기" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">1종 승합자동차</span></div>
+
+<div class="fact">승합차는 승차정원에 따라 1~3종, 시험은 주로 1종 출제. <strong>1종 = 26인승 이상</strong>.</div>
+<div class="foot"><span class="emph">“1종이라도 꼭 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=3390" target="_blank" rel="noopener">▶ 0:56:30</a></div>
+</div></li><li class="item k-mem" data-id="7|0:56:30|암기|2종 화물자동차" data-level="A" data-kind="암기" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">2종 화물자동차</span></div>
+
+<div class="fact">화물차는 <strong>적재정량</strong>으로 구분, 시험은 주로 2종 출제. <strong>2.5톤 초과 ~ 5톤 이하 = 2종 화물자동차</strong>.</div>
+<div class="foot"><span class="emph">“주로 2종을 물어봄”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=3390" target="_blank" rel="noopener">▶ 0:56:30</a></div>
+</div></li><li class="item k-opt" data-id="7|0:57:00|보기표현|화물 vs 특정용도자동차 구분" data-level="B" data-kind="보기표현" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">화물 vs 특정용도자동차 구분</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「다음 중 특정용도자동차에 해당하는 것」</div>
+<div class="fact">종 구분뿐 아니라 <strong>화물자동차와 특정용도자동차 구분 문제</strong>도 출제. 화물자동차 = 단순히 짐을 싣는 차, 특정용도자동차 = 짐을 싣고 사회적으로 다양한 일을 하는 차.</div>
+<div class="foot"><span class="emph">“구분 문제가 나옴”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=3420" target="_blank" rel="noopener">▶ 0:57:00</a></div>
+</div></li><li class="item k-mem" data-id="7|0:57:30|암기|화물·특정용도자동차 예시" data-level="S" data-kind="암기" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-S">S 최우선</span><span class="topic">화물·특정용도자동차 예시</span></div>
+
+<div class="fact">화물자동차: <strong>탱크로리, 분뇨차, 청소차</strong>, 자막 '탈소차'(살수차로 추정). 특정용도자동차: <strong>이동진료차, 이동도서관차, 채혈차, 방송중계차, 현금수송차</strong>. 다 외우기 힘들면 화면에 빨갛게 칠한 것만이라도 암기하라고 했으나, 빨간색 항목은 자막으로 확인 불가.</div>
+<div class="foot"><span class="emph">“빨갛게 칠한 것 반드시 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=3450" target="_blank" rel="noopener">▶ 0:57:30</a></div>
+</div></li><li class="item k-mem" data-id="7|0:59:00|암기|할인할증 평가대상기간" data-level="A" data-kind="암기" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">할인할증 평가대상기간</span></div>
+
+<div class="fact">현실에서는 '직전 3년'이라 하지만 시험은 구분해 암기. <strong>단체 = 3년간</strong>(자막 '0년 기준 3년', 기준 시점은 교재로 확인). <strong>개인 = 전전계약 만료일 3개월 전 ~ 전계약 만료일 3개월 전</strong>.</div>
+<div class="foot"><span class="emph">“단체·개인 구분해 외우기”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=3540" target="_blank" rel="noopener">▶ 0:59:00</a></div>
+</div></li><li class="item k-trap" data-id="7|0:59:00|틀린보기|평가대상기간 단체·개인 바꾸기" data-level="A" data-kind="틀린보기" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">평가대상기간 단체·개인 바꾸기</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「단체: 전전계약 만료일 3개월 전 ~ 전계약 만료일 3개월 전」</div>
+<div class="fact"><strong>단체와 개인의 평가기간 설명을 서로 바꾼 보기</strong>가 많이 출제. '전전 3개월 전 ~ 전 3개월 전'은 <strong>개인</strong> 기준, 단체는 <strong>3년간</strong>.</div>
+<div class="foot"><span class="emph">“서로 바꾼 보기 많이 나옴”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=3540" target="_blank" rel="noopener">▶ 0:59:00</a></div>
+</div></li><li class="item k-mem" data-id="7|0:59:00|암기|사고내용별 점수(대인·자신)" data-level="B" data-kind="암기" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">사고내용별 점수(대인·자신)</span></div>
+
+<div class="fact">대부분 보험사는 <strong>1점 이상부터 할증</strong> → 1점 항목 체크하며 암기. 대인 <strong>사망 4점</strong>, <strong>1급 부상 4점</strong>(사망과 동일), 가장 가벼운 <strong>13·14급 부상 1점</strong>, <strong>자기신체사고는 부상 정도와 무관하게 무조건 1점</strong>. 피해자가 가해자 보험사 접수번호로 병원에 <strong>한 번이라도</strong> 다녀오면 할증.</div>
+<div class="foot"><span class="emph">“1점 항목 체크하며 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=3540" target="_blank" rel="noopener">▶ 0:59:00</a></div>
+</div></li><li class="item k-opt" data-id="7|1:00:30|보기표현|사고점수 1점 고르기" data-level="A" data-kind="보기표현" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-A">A 꼭 암기</span><span class="topic">사고점수 1점 고르기</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「1점에 해당하는 것을 모두 고르시오」</div>
+<div class="fact">1점 = ① 대인 <strong>13급·14급 부상</strong> ② <strong>자기신체사고</strong>(부상 정도와 무관하게 <strong>무조건 1점</strong>) ③ 물적사고 <strong>할증기준금액 초과~1억 원 이하</strong>. 기준금액(기본값 <strong>200만 원</strong>) 이하는 <strong>0.5점</strong>(할증 X), <strong>1억 초과는 2점</strong>.</div>
+<div class="foot"><span class="emph">“시험에서 1점 고르라 하면”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=3630" target="_blank" rel="noopener">▶ 1:00:30</a></div>
+</div></li><li class="item k-mem" data-id="7|1:01:30|암기|가족운전자 한정특약" data-level="B" data-kind="암기" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">가족운전자 한정특약</span></div>
+
+<div class="fact"><strong>1촌 이내</strong> 가족까지만 가입 가능: 배우자(무촌)·부모·자녀 <strong>O</strong> / 조부모·손자녀·형제자매(2촌) <strong>X</strong>.</div>
+<div class="foot"><span class="emph">“이렇게 기억해 주세요”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=3690" target="_blank" rel="noopener">▶ 1:01:30</a></div>
+</div></li><li class="item k-mem" data-id="7|1:02:30|암기|대인배상Ⅰ 최저보상" data-level="A" data-kind="암기" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">대인배상Ⅰ 최저보상</span></div>
+
+<div class="fact">사망 1억 5천만 원에 과실상계한 결과가 <strong>2천만 원 미만</strong>이면 과실상계 금액과 무관하게 <strong>최저 2천만 원</strong> 보상. 사망 최고 <strong>1억 5천만</strong>/최저 <strong>2천만</strong>, 후유장애 최고 <strong>1억 5천만</strong>/최저 <strong>1천만</strong> → <strong>사망 최저와 후유장애 최저가 다르다</strong>는 점이 출제 포인트. 부상도 무조건 3천만이 아니라 <strong>1급 3천만 ~ 14급 50만 원</strong>.</div>
+<div class="foot"><span class="emph">“출제자가 내고 싶은 포인트”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=3750" target="_blank" rel="noopener">▶ 1:02:30</a></div>
+</div></li><li class="item k-opt" data-id="7|1:03:30|보기표현|연령한정특약 위반 판단 시점" data-level="S" data-kind="보기표현" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-S">S 최우선</span><span class="topic">연령한정특약 위반 판단 시점</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「운전연령 위반 판단 시점: 가입 시점 vs 사고 시점」</div>
+<div class="fact">연령 위반 여부는 가입 시점이 아니라 <strong>사고 시점</strong> 기준. 연령한정특약은 이것과 '위반 시 보상 담보' <strong>딱 두 가지만</strong> 출제.</div>
+<div class="foot"><span class="emph">“시험엔 딱 두 가지만 나옴”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=3810" target="_blank" rel="noopener">▶ 1:03:30</a></div>
+</div></li><li class="item k-opt" data-id="7|1:04:00|보기표현|연령한정특약 위반 시 보상 담보" data-level="S" data-kind="보기표현" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-S">S 최우선</span><span class="topic">연령한정특약 위반 시 보상 담보</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「운전연령 위반 시에도 보상하는 담보」</div>
+<div class="fact">위반 시 원칙은 보상 X, 단 피해자 보호를 위해 <strong>대인배상Ⅰ 한도 내에서는 보상</strong>한다고 답하면 됨.</div>
+<div class="foot"><span class="emph">“시험엔 딱 두 가지만 나옴”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=3840" target="_blank" rel="noopener">▶ 1:04:00</a></div>
+</div></li><li class="item k-mem" data-id="7|1:04:00|암기|뺑소니 사고 보상(정부보장사업)" data-level="B" data-kind="암기" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">뺑소니 사고 보상(정부보장사업)</span></div>
+
+<div class="fact">가해자를 못 찾는 뺑소니 사고도 정부보장사업으로 <strong>대인배상Ⅰ 기준까지 보상</strong>, <strong>대물은 보상 X</strong>. 대한민국 도로의 피해자는 대인배상Ⅰ까지는 보상받음.</div>
+<div class="foot"><span class="emph">“대인Ⅰ 관련 문제 두 개 중 하나”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=3840" target="_blank" rel="noopener">▶ 1:04:00</a></div>
+</div></li><li class="item k-trap" data-id="7|1:04:30|틀린보기|대인배상Ⅱ 장례비" data-level="S" data-kind="틀린보기" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-S">S 최우선</span><span class="topic">대인배상Ⅱ 장례비</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「장례비는 500만 원 한도 내에서 실손 보상」</div>
+<div class="fact">틀림. 장례비는 장례를 치렀는지와 무관하게 <strong>500만 원 정액</strong> 지급(실손 아님).</div>
+<div class="foot"><span class="emph">“틀린 보기로 나옴·반드시 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=3870" target="_blank" rel="noopener">▶ 1:04:30</a></div>
+</div></li><li class="item k-mem" data-id="7|1:05:00|암기|대인배상Ⅱ 위자료 금액" data-level="S" data-kind="암기" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-S">S 최우선</span><span class="topic">대인배상Ⅱ 위자료 금액</span></div>
+
+<div class="fact">사망자 나이 기준: <strong>65세 미만 8,000만 원</strong> / <strong>65세 이상 5,000만 원</strong>.</div>
+<div class="foot"><span class="emph">“버릴 게 없다·반드시 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=3900" target="_blank" rel="noopener">▶ 1:05:00</a></div>
+</div></li><li class="item k-mem" data-id="7|1:06:30|암기|상실수익액 사망 vs 후유장애" data-level="S" data-kind="암기" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-S">S 최우선</span><span class="topic">상실수익액 사망 vs 후유장애</span></div>
+
+<div class="fact"><strong>사망</strong>: 소득에서 <strong>생활비를 뺀</strong> 뒤 호프만계수 적용 / <strong>후유장애</strong>: 생활비는 빼지 않고 소득 × <strong>노동능력상실률</strong>(예: 70%) 후 호프만계수 적용. '사망은 생활비 빼고, 후유장애는 상실률 곱한다'.</div>
+<div class="foot"><span class="emph">“이렇게만 기억해도 구분 가능”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=3990" target="_blank" rel="noopener">▶ 1:06:30</a></div>
+</div></li><li class="item k-mem" data-id="7|1:07:00|암기|위자료 청구권자 사실혼 배우자" data-level="S" data-kind="암기" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-S">S 최우선</span><span class="topic">위자료 청구권자 사실혼 배우자</span></div>
+
+<div class="fact">위자료 청구권자는 원칙상 민법상 순위(사실혼 배우자 없음)를 따르지만, <strong>대인배상Ⅱ 위자료 청구권자에는 사실혼 배우자도 포함</strong>.</div>
+<div class="foot"><span class="emph">“특이한 내용이라 꼭 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=4020" target="_blank" rel="noopener">▶ 1:07:00</a></div>
+</div></li><li class="item k-opt" data-id="7|1:07:00|보기표현|대인배상Ⅱ 구조수색비" data-level="S" data-kind="보기표현" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-S">S 최우선</span><span class="topic">대인배상Ⅱ 구조수색비</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「구조수색비는 실비로 지급한다」</div>
+<div class="fact">정액인지 실비인지 출제 → <strong>실비</strong> 지급이 정답(정액 X).</div>
+<div class="foot"><span class="emph">“정액·실비 여부를 물어봄”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=4020" target="_blank" rel="noopener">▶ 1:07:00</a></div>
+</div></li><li class="item k-mem" data-id="7|1:07:30|암기|대인배상Ⅱ 휴업손해" data-level="S" data-kind="암기" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-S">S 최우선</span><span class="topic">대인배상Ⅱ 휴업손해</span></div>
+
+<div class="fact">휴업일수에 따른 수입 감소액의 <strong>85%</strong> 지급(100% 전부 아님).</div>
+<div class="foot"><span class="emph">“버릴 게 없다·반드시 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=4050" target="_blank" rel="noopener">▶ 1:07:30</a></div>
+</div></li><li class="item k-mem" data-id="7|1:07:30|암기|대인배상Ⅱ 간병비" data-level="S" data-kind="암기" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-S">S 최우선</span><span class="topic">대인배상Ⅱ 간병비</span></div>
+
+<div class="fact"><strong>7세 미만</strong> 어린이(미취학아동)에게 간병비 지원, 무기한이 아니라 <strong>최대 60일</strong> 한도.</div>
+<div class="foot"><span class="emph">“버릴 게 없다·반드시 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=4050" target="_blank" rel="noopener">▶ 1:07:30</a></div>
+</div></li><li class="item k-mem" data-id="7|1:07:30|암기|대인배상Ⅱ 통원비" data-level="S" data-kind="암기" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-S">S 최우선</span><span class="topic">대인배상Ⅱ 통원비</span></div>
+
+<div class="fact">통원비 = <strong>통원일수 × 8,000원</strong>.</div>
+<div class="foot"><span class="emph">“버릴 게 없다·반드시 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=4050" target="_blank" rel="noopener">▶ 1:07:30</a></div>
+</div></li><li class="item k-mem" data-id="7|1:08:00|암기|대인배상Ⅱ 가정간호비" data-level="S" data-kind="암기" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-S">S 최우선</span><span class="topic">대인배상Ⅱ 가정간호비</span></div>
+
+<div class="fact">후유장애 중 전문의로부터 <strong>노동능력상실률 100%</strong>를 인정받은 자에게 가정간호비 지원.</div>
+<div class="foot"><span class="emph">“버릴 게 하나도 없다·반드시 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=4080" target="_blank" rel="noopener">▶ 1:08:00</a></div>
+</div></li><li class="item k-opt" data-id="7|1:10:00|보기표현|시세하락손해 계산" data-level="B" data-kind="보기표현" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">시세하락손해 계산</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「차량가액 5천만 원, 수리비 3천만 원, 출고 후 3년 경과」</div>
+<div class="fact">수리비가 사고 직전 차량가액의 <strong>20% 초과</strong>여야 지급(5천만×20%=1천만 &lt; 3천만 → 대상). 출고 <strong>1년 이하 20% / 1~2년 15% / 2~5년 10%</strong> → 3년이면 수리비 3천만 원 + 별도 <strong>300만 원</strong>(수리비의 10%).</div>
+<div class="foot"><span class="emph">“예시 문제로 풀이”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=4200" target="_blank" rel="noopener">▶ 1:10:00</a></div>
+</div></li><li class="item k-opt" data-id="7|1:14:00|보기표현|불법운전 자기부담금 계산" data-level="B" data-kind="보기표현" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">불법운전 자기부담금 계산</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「1급 부상 후 사망, 총 손해 4억 원」</div>
+<div class="fact">불법운전(음주·무면허·뺑소니·약물) 자기부담금: 대인Ⅰ <strong>전액</strong>, 대물 <strong>2천만 원까지 전액</strong>, 대인Ⅱ <strong>1억</strong>, 대물(초과) <strong>5천만</strong>. 예: 대인Ⅰ 3천만+1억5천=<strong>1억 8천</strong>, 대인Ⅱ 2억 2천 중 <strong>1억</strong> → 운전자 부담 <strong>2억 8천만 원</strong>.</div>
+<div class="foot"><span class="emph">“예시 문제로 풀이”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=4440" target="_blank" rel="noopener">▶ 1:14:00</a></div>
+</div></li><li class="item k-opt" data-id="7|1:15:00|보기표현|가지급보험금" data-level="B" data-kind="보기표현" data-unit="u7">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">가지급보험금</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「치료비는 전액 가지급」</div>
+<div class="fact">가지급보험금은 지급할 보험금의 <strong>50% 한도</strong>. 단 시험에 <strong>치료비</strong>로 나오면 <strong>전액</strong> 지급.</div>
+<div class="foot"><span class="emph">“시험에 치료비라고 나오면”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=4500" target="_blank" rel="noopener">▶ 1:15:00</a></div>
+</div></li></ol></section><section class="unit" id="u8"><h2><span>8. 모집종사자·보험업법 모집 규정</span><span class="uprog" data-prog="u8"></span></h2><ol class="items"><li class="item k-mem" data-id="8|1:16:00|암기|설계사 업무(대리 vs 중개)" data-level="A" data-kind="암기" data-unit="u8">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">설계사 업무(대리 vs 중개)</span></div>
+
+<div class="fact"><strong>중개</strong> = 구매자(소비자) 입장, <strong>대리</strong> = 판매자(회사) 입장을 더 대변. 대리점 = 대리, 중개사 = 중개, <strong>설계사는 중개</strong> 업무.</div>
+<div class="foot"><span class="emph">“기억해야 할 내용·오답률 높은 페이지”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=4560" target="_blank" rel="noopener">▶ 1:16:00</a></div>
+</div></li><li class="item k-mem" data-id="8|1:16:30|암기|모집종사자 권한" data-level="A" data-kind="암기" data-unit="u8">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">모집종사자 권한</span></div>
+
+<div class="fact">보험회사는 계약체결권·고지수령권·보험료수령권 등 권한을 회사 입장을 대변하는 <strong>대리인(대리점)</strong>에게 부여. O/X 표는 통째로 외우지 말고 '<strong>대리는 권한을 전부 가진다</strong>'로 이해하면 쉽게 암기.</div>
+<div class="foot"><span class="emph">“개념으로 외우기·오답률 높은 페이지”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=4590" target="_blank" rel="noopener">▶ 1:16:30</a></div>
+</div></li><li class="item k-mem" data-id="8|1:17:00|암기|등록 위탁기관·소속" data-level="A" data-kind="암기" data-unit="u8">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">등록 위탁기관·소속</span></div>
+
+<div class="fact">등록은 원칙상 <strong>금융위원회</strong>. 현재 설계사·대리점은 <strong>손해보험협회</strong>, 중개사는 <strong>금융감독원</strong>에 위탁. 설계사·대리점은 보험회사 소속, 중개사는 <strong>독립적</strong>으로 모집.</div>
+<div class="foot"><span class="emph">“오답률 높은 페이지·꼭 별표”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=4620" target="_blank" rel="noopener">▶ 1:17:00</a></div>
+</div></li><li class="item k-mem" data-id="8|1:17:30|암기|보험 모집을 할 수 없는 자" data-level="S" data-kind="암기" data-unit="u8">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-S">S 최우선</span><span class="topic">보험 모집을 할 수 없는 자</span></div>
+
+<div class="fact">보험회사 임원 중 <strong>대표이사, 사외이사, 감사, 감사위원</strong>은 보험 모집 불가.</div>
+<div class="foot"><span class="emph">“오답률 높음·꼭 별표”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=4650" target="_blank" rel="noopener">▶ 1:17:30</a></div>
+</div></li><li class="item k-trap" data-id="8|1:18:30|틀린보기|설계사 등록제한(파산자)" data-level="A" data-kind="틀린보기" data-unit="u8">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">설계사 등록제한(파산자)</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「파산 신청일로부터 5년(또는 10년) 이내/경과 후 등록 가능」</div>
+<div class="fact">틀림. 파산자는 기간과 무관하게 <strong>복권(권리 회복)된 후</strong> 등록 가능. 파산자 설명에 <strong>기간이 나오면 전부 함정</strong>.</div>
+<div class="foot"><span class="emph">“모두 틀린 보기·전부 함정”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=4710" target="_blank" rel="noopener">▶ 1:18:30</a></div>
+</div></li><li class="item k-opt" data-id="8|1:18:30|보기표현|설계사 등록제한(파산자)" data-level="A" data-kind="보기표현" data-unit="u8">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-A">A 꼭 암기</span><span class="topic">설계사 등록제한(파산자)</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「파산자는 복권된 후 등록 가능」</div>
+<div class="fact">맞는 보기. '권리가 회복된 후, 즉 <strong>복권된 후</strong> 등록 가능'이 정답 표현.</div>
+<div class="foot"><span class="emph">“이런 보기가 맞는 보기”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=4710" target="_blank" rel="noopener">▶ 1:18:30</a></div>
+</div></li><li class="item k-mem" data-id="8|1:20:30|암기|대리점 등록 요건(연수·경력)" data-level="B" data-kind="암기" data-unit="u8">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">대리점 등록 요건(연수·경력)</span></div>
+
+<div class="fact">대리점은 <strong>설계사 조건에 1년씩 더하면</strong> 됨. 연수과정 이수 후 등록: 설계사 <strong>1년 이내</strong> → 대리점 <strong>2년 이내</strong>. 관련 업무 경력: 설계사 <strong>3년 이내 1년 이상</strong> → 대리점 <strong>4년 이내 2년 이상</strong>.</div>
+<div class="foot"><span class="emph">“1년씩 더하면 쉽게 암기”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=4830" target="_blank" rel="noopener">▶ 1:20:30</a></div>
+</div></li><li class="item k-mem" data-id="8|1:22:30|암기|보험대리점 등록 제한 사유" data-level="A" data-kind="암기" data-unit="u8">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">보험대리점 등록 제한 사유</span></div>
+
+<div class="fact">등록 불가: 현재 <strong>보험설계사</strong>로 등록된 자, <strong>보험중개사</strong>, <strong>다른 보험회사 임직원</strong>, <strong>국가기관 퇴직자로 구성된 단체·비영리법인</strong>, <strong>화물·여객자동차 운송사업자</strong> 및 임직원, <strong>다단계판매업자</strong>, <strong>자동차 제조·판매업자</strong>. (전부 외우기 부담되면 아래 등록 가능 예외 2가지를 확실히)</div>
+<div class="foot"><span class="emph">“시험에 자주 나오는 내용”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=4950" target="_blank" rel="noopener">▶ 1:22:30</a></div>
+</div></li><li class="item k-mem" data-id="8|1:23:30|암기|대리점 등록 제한의 예외" data-level="S" data-kind="암기" data-unit="u8">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-S">S 최우선</span><span class="topic">대리점 등록 제한의 예외</span></div>
+
+<div class="fact">자동차 판매업자는 등록 제한이지만 <strong>중고차 판매업자·수입차 판매업자</strong>는 제한 대상에서 빠져 <strong>대리점 등록 가능</strong>. 제한 사유를 다 외우기보다 이 <strong>등록 가능 사례 두 가지</strong>를 확실히 암기.</div>
+<div class="foot"><span class="emph">“이 두 가지 꼭 기억하고 시험장”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=5010" target="_blank" rel="noopener">▶ 1:23:30</a></div>
+</div></li><li class="item k-opt" data-id="8|1:25:30|보기표현|금소법 용어" data-level="B" data-kind="보기표현" data-unit="u8">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">금소법 용어</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「금소법」</div>
+<div class="fact">시험 문제에 자주 나오는 <strong>금소법</strong> = <strong>「금융소비자 보호에 관한 법률」</strong>의 줄임말.</div>
+<div class="foot"><span class="emph">“시험 문제에 자주 나옴”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=5130" target="_blank" rel="noopener">▶ 1:25:30</a></div>
+</div></li><li class="item k-trap" data-id="8|1:25:30|틀린보기|금소법상 판매업자 구분" data-level="A" data-kind="틀린보기" data-unit="u8">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">금소법상 판매업자 구분</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「보험설계사는 금융상품 직접판매업자이다」</div>
+<div class="fact">틀림. 금소법상 <strong>보험회사 = 금융상품 직접판매업자</strong>, <strong>보험설계사·보험대리점·보험중개사 = 금융상품 판매대리·중개업자</strong>.</div>
+<div class="foot"><span class="emph">“속아 넘어갈 수 있음, 지금 정리”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=5130" target="_blank" rel="noopener">▶ 1:25:30</a></div>
+</div></li><li class="item k-mem" data-id="8|1:26:30|암기|불완전판매 방지 교육 대상" data-level="A" data-kind="암기" data-unit="u8">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">불완전판매 방지 교육 대상</span></div>
+
+<div class="fact">대상: 직전 연도 <strong>불완전판매율 1% 이상이면서(AND) 불완전판매 건수 3건 이상</strong>인 설계사. <strong>보험협회</strong>가 대상자 선정 → 각 보험회사에 통보 → 통보받은 모집인이 교육 이수.</div>
+<div class="foot"><span class="emph">“선정 기준·주체 외워라”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=5190" target="_blank" rel="noopener">▶ 1:26:30</a></div>
+</div></li><li class="item k-trap" data-id="8|1:26:30|틀린보기|불완전판매 교육 대상 선정 주체" data-level="A" data-kind="틀린보기" data-unit="u8">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">불완전판매 교육 대상 선정 주체</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「금융위원회나 금융감독원에서 대상자를 선정한다」</div>
+<div class="fact">틀림. 불완전판매 방지 교육 대상자는 <strong>보험협회</strong>가 선정해 <strong>보험회사에 통보</strong>.</div>
+<div class="foot"><span class="emph">“틀린 보기로 나옴”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=5190" target="_blank" rel="noopener">▶ 1:26:30</a></div>
+</div></li><li class="item k-opt" data-id="8|1:26:30|보기표현|판매 프로세스 6단계 순서" data-level="B" data-kind="보기표현" data-unit="u8">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">판매 프로세스 6단계 순서</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「판매 프로세스의 순서」</div>
+<div class="fact">순서 출제: <strong>가망고객 발굴 → 접근 → 정보수집 → 가입권유 → 계약체결 → 소개 확보</strong>.</div>
+<div class="foot"><span class="emph">“순서를 물어봄”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=5190" target="_blank" rel="noopener">▶ 1:26:30</a></div>
+</div></li><li class="item k-trap" data-id="8|1:27:00|틀린보기|판매 프로세스의 유연성" data-level="B" data-kind="틀린보기" data-unit="u8">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-B">B 기억</span><span class="topic">판매 프로세스의 유연성</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「반드시 프로세스대로 계약이 이루어져야 한다」</div>
+<div class="fact">틀림. 판매 프로세스는 상황에 따라 <strong>단계 추가</strong> 가능, 필요하면 각 단계가 <strong>연장되거나 생략</strong>되기도 함.</div>
+<div class="foot"><span class="emph">“이 보기는 틀림”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=5220" target="_blank" rel="noopener">▶ 1:27:00</a></div>
+</div></li><li class="item k-trap" data-id="8|1:27:30|틀린보기|소개 고객" data-level="B" data-kind="틀린보기" data-unit="u8">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-B">B 기억</span><span class="topic">소개 고객</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「소개 고객은 반드시 성공한다 / 절대 해지되지 않는다」</div>
+<div class="fact">틀림. 가망고객(연고·소개·개척) 중 <strong>소개 고객</strong>이 실패 확률이 가장 낮고 생산성이 가장 높을 뿐. 확률이 높은 것이지 '반드시·절대'는 없음.</div>
+<div class="foot"><span class="emph">“틀린 보기로 나옴”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=5250" target="_blank" rel="noopener">▶ 1:27:30</a></div>
+</div></li><li class="item k-trap" data-id="8|1:28:00|틀린보기|인생의 5대 필요자금" data-level="A" data-kind="틀린보기" data-unit="u8">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">인생의 5대 필요자금</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「장례비」</div>
+<div class="fact">5대 필요자금 = <strong>생활비, 양육비, 주택구입비, 노후자금, 긴급예비자금</strong>. '5대 필요자금이 아닌 것은?' 문제에 <strong>장례비</strong>가 단골 출제, 장례비는 5대 필요자금 <strong>아님</strong>.</div>
+<div class="foot"><span class="emph">“자주 나오는 오답 보기”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=5280" target="_blank" rel="noopener">▶ 1:28:00</a></div>
+</div></li><li class="item k-opt" data-id="8|1:28:30|보기표현|증권 전달" data-level="B" data-kind="보기표현" data-unit="u8">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">증권 전달</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「증권 전달은 완전판매의 실현 단계」</div>
+<div class="fact">소개 확보의 가장 좋은 수단은 <strong>증권을 직접 전달</strong>하며 내용을 고객과 함께 확인하는 것. 그래서 '<strong>증권 전달은 완전판매의 실현 단계</strong>'로 표현.</div>
+<div class="foot"><span class="emph">“이렇게 표현하기도 함”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=5310" target="_blank" rel="noopener">▶ 1:28:30</a></div>
+</div></li><li class="item k-mem" data-id="8|1:30:00|암기|우수인증설계사 제한 기간" data-level="B" data-kind="암기" data-unit="u8">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">우수인증설계사 제한 기간</span></div>
+
+<div class="fact"><strong>판매를 잘못한 것</strong>(불완전판매·품질보증해지)은 <strong>직전 1년간</strong> 없어야 함. <strong>사람 자체가 잘못된 것</strong>(법령 위반 처벌 이력, 고객 돈 유용·횡령 등)은 <strong>직전 3년간</strong> 없어야 함.</div>
+<div class="foot"><span class="emph">“판매 1년·사람 3년 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=5400" target="_blank" rel="noopener">▶ 1:30:00</a></div>
+</div></li></ol></section><section class="unit" id="u9"><h2><span>9. 손해보험 기초이론</span><span class="uprog" data-prog="u9"></span></h2><ol class="items"><li class="item k-trap" data-id="9|1:30:30|틀린보기|위험의 정의" data-level="B" data-kind="틀린보기" data-unit="u9">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-B">B 기억</span><span class="topic">위험의 정의</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「우연이 아닌 필연적인 사고 발생의 불확실성」</div>
+<div class="fact">틀림. 위험 = <strong>우연한</strong> 사고 발생의 <strong>불확실성 또는 가능성</strong>.</div>
+<div class="foot"><span class="emph">“유치한 함정, 틀린 보기”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=5430" target="_blank" rel="noopener">▶ 1:30:30</a></div>
+</div></li><li class="item k-opt" data-id="9|1:32:30|보기표현|주관적 vs 객관적 위험" data-level="B" data-kind="보기표현" data-unit="u9">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">주관적 vs 객관적 위험</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「통계 측정이 불가능한 위험은?」</div>
+<div class="fact">통계 측정 <strong>불가능</strong> 위험 → <strong>주관적 위험</strong>(스스로 느끼는 위험). 통계 측정 <strong>가능</strong> 위험 → <strong>객관적 위험</strong>(대수의 법칙 근거, <strong>보험의 대상</strong>).</div>
+<div class="foot"><span class="emph">“시험에서 이렇게 물음”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=5550" target="_blank" rel="noopener">▶ 1:32:30</a></div>
+</div></li><li class="item k-trap" data-id="9|1:33:30|틀린보기|순수위험의 보험 가능성" data-level="B" data-kind="틀린보기" data-unit="u9">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-B">B 기억</span><span class="topic">순수위험의 보험 가능성</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「모든 순수위험은 보험이 가능하다」</div>
+<div class="fact">틀림. 순수위험(손해만 발생: 상해·사망·교통사고·화재)에도 주관적 위험이 있을 수 있어 <strong>보험 불가능 위험을 제외한 후</strong> 적용. 이익·손해가 공존하는 <strong>투기위험</strong>(주식·복권)은 <strong>절대</strong> 보험 대상 불가.</div>
+<div class="foot"><span class="emph">“틀린 보기로 나옴”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=5610" target="_blank" rel="noopener">▶ 1:33:30</a></div>
+</div></li><li class="item k-mem" data-id="9|1:34:00|암기|보험 가능 vs 불가능 위험" data-level="A" data-kind="암기" data-unit="u9">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">보험 가능 vs 불가능 위험</span></div>
+
+<div class="fact"><strong>순수위험</strong>(손해만)·<strong>투기위험</strong>(이익·손해 공존, 보험 불가) 용어와 함께 구분을 미리 눈에 익히기. 보험 가능 위험: <strong>인적 위험, 재산적 위험, 배상책임 위험</strong>. 보험 불가능 위험: 이득 가능성이 있는 <strong>주식투자, 도박, 신규사업 진출</strong>.</div>
+<div class="foot"><span class="emph">“지금 눈에 익히는 게 너무 중요”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=5640" target="_blank" rel="noopener">▶ 1:34:00</a></div>
+</div></li><li class="item k-opt" data-id="9|1:34:30|보기표현|보험 기본원칙 출제 방식" data-level="A" data-kind="보기표현" data-unit="u9">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-A">A 꼭 암기</span><span class="topic">보험 기본원칙 출제 방식</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「다음 설명과 관련이 깊은 원칙은?」</div>
+<div class="fact">기본원칙 문제는 거의 대부분 <strong>설명을 주고 관련 원칙을 고르는</strong> 방식 → <strong>빨간 키워드 중심</strong> 공부. 예: 수입(<strong>보험료 총액</strong>) = 지출(<strong>보험금 총액</strong>), 회사 관점 → <strong>수지상등</strong>. <strong>손해보험 고유</strong> 원칙(실제 손해 이상 보상 불가) → <strong>이득금지</strong>. 보험가액에 대한 가입금액 비율로 보상 → <strong>비례보상(=안분의 원칙)</strong>.</div>
+<div class="foot"><span class="emph">“거의 대부분 이렇게 출제”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=5670" target="_blank" rel="noopener">▶ 1:34:30</a></div>
+</div></li><li class="item k-opt" data-id="9|1:35:00|보기표현|위험의 분담 원칙" data-level="B" data-kind="보기표현" data-unit="u9">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">위험의 분담 원칙</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「보험료 갹출」</div>
+<div class="fact">'<strong>보험료 갹출</strong>'이 나오면 → <strong>위험의 분담 원칙</strong>. 동일 위험의 다수 경제단위가 보험료를 갹출해 일부 구성원의 손해를 보상한다는 원칙.</div>
+<div class="foot"><span class="emph">“이 단어면 이 원칙”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=5700" target="_blank" rel="noopener">▶ 1:35:00</a></div>
+</div></li><li class="item k-opt" data-id="9|1:35:00|보기표현|대수의 법칙" data-level="B" data-kind="보기표현" data-unit="u9">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">대수의 법칙</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「확률, 통계」</div>
+<div class="fact">'<strong>확률·통계</strong>'(대량 관찰을 통한 통계적 추측) 단어가 나오면 → <strong>대수의 법칙</strong>(큰 수의 법칙) 선택.</div>
+<div class="foot"><span class="emph">“이 단어면 대수의 법칙”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=5700" target="_blank" rel="noopener">▶ 1:35:00</a></div>
+</div></li><li class="item k-opt" data-id="9|1:36:30|보기표현|실손보상의 원칙" data-level="B" data-kind="보기표현" data-unit="u9">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">실손보상의 원칙</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「이득금지의 원칙에 입각하여 탄생한 보상의 기본 원리」</div>
+<div class="fact">이 설명이 나오면 → <strong>실손보상의 원칙</strong>(실제 손해난 만큼 보상). 이득금지 원칙에서 초과보험·중복보험·보험자대위 개념도 파생.</div>
+<div class="foot"><span class="emph">“이렇게 질문하면 정답”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=5790" target="_blank" rel="noopener">▶ 1:36:30</a></div>
+</div></li><li class="item k-opt" data-id="9|1:37:30|보기표현|급부·반대급부의 원칙" data-level="B" data-kind="보기표현" data-unit="u9">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">급부·반대급부의 원칙</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「렉시스의 법칙」</div>
+<div class="fact">'<strong>렉시스 법칙</strong>'이 보이면 → <strong>급부·반대급부의 원칙</strong>. 보험금 지급에 과부족이 없어야 한다는 <strong>계약자 개개인 관점</strong> 원칙(수지상등은 회사 관점). 렉시스 이론 내용 자체는 중요하지 않음.</div>
+<div class="foot"><span class="emph">“렉시스 보이면 이것 선택”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=5850" target="_blank" rel="noopener">▶ 1:37:30</a></div>
+</div></li><li class="item k-mem" data-id="9|1:37:30|암기|보험의 법률상 분류" data-level="B" data-kind="암기" data-unit="u9">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">보험의 법률상 분류</span></div>
+
+<div class="fact"><strong>상법은 2분류</strong>: 손해보험(재산: 화재·운송·해상·책임·자동차 등), 인보험(사람: 생명·상해). <strong>보험업법은 3분류</strong>: 생명보험, 손해보험, <strong>제3보험</strong>(상해·질병·간병).</div>
+<div class="foot"><span class="emph">“가장 힘들어하는 부분, 집중”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=5850" target="_blank" rel="noopener">▶ 1:37:30</a></div>
+</div></li><li class="item k-opt" data-id="9|1:38:30|보기표현|보험사업 허가 근거법" data-level="B" data-kind="보기표현" data-unit="u9">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">보험사업 허가 근거법</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「어떤 법의 규정에 따라 허가를 받는가」</div>
+<div class="fact">보험사업은 <strong>금융위원회 허가</strong> 필요, 허가 근거는 <strong>보험업법</strong> 규정.</div>
+<div class="foot"><span class="emph">“이렇게 물어봄”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=5910" target="_blank" rel="noopener">▶ 1:38:30</a></div>
+</div></li><li class="item k-mem" data-id="9|1:40:00|암기|공영보험 vs 민영보험" data-level="A" data-kind="암기" data-unit="u9">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">공영보험 vs 민영보험</span></div>
+
+<div class="fact">정부·공공기관이 운영하면 <strong>공영보험</strong>(4대보험: 산재·건강보험 등, <strong>무역보험·수출보험</strong>), 민간 보험회사가 운영하면 <strong>민영보험</strong>(자동차·보증·배상책임·상해보험). <strong>무역·수출보험이 공영보험</strong>이라는 점이 헷갈리는 포인트.</div>
+<div class="foot"><span class="emph">“헷갈림, 지금 제대로 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=6000" target="_blank" rel="noopener">▶ 1:40:00</a></div>
+</div></li></ol></section><section class="unit" id="u10"><h2><span>10. 보험범죄·교통법규</span><span class="uprog" data-prog="u10"></span></h2><ol class="items"><li class="item k-mem" data-id="10|1:41:00|암기|보험사기 미수범 처벌" data-level="A" data-kind="암기" data-unit="u10">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">보험사기 미수범 처벌</span></div>
+
+<div class="fact">보험사기방지특별법(<strong>2016년</strong>)상 보험사기는 <strong>미수범도 처벌</strong>(기본 처벌: <strong>10년 이하 징역 또는 5천만 원 이하 벌금</strong>).</div>
+<div class="foot"><span class="emph">“미수범 처벌 꼭 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=6060" target="_blank" rel="noopener">▶ 1:41:00</a></div>
+</div></li><li class="item k-opt" data-id="10|1:41:00|보기표현|연성사기 vs 경성사기" data-level="B" data-kind="보기표현" data-unit="u10">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">연성사기 vs 경성사기</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「연성사기 / 경성사기」</div>
+<div class="fact"><strong>연성사기</strong>(비교적 가벼운 사기) = 우연히 일어난 사고의 <strong>과잉청구</strong>, 가입 시 <strong>알릴 의무 위반</strong>(몸무게를 속이는 등), <strong>특정 피해자가 생기지 않음</strong>. <strong>경성사기</strong>(무거운 사기) = <strong>고의로 보험사고를 일으킴</strong>(예: <strong>살인·방화</strong>).</div>
+<div class="foot"><span class="emph">“이 단어가 나올 텐데”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=6060" target="_blank" rel="noopener">▶ 1:41:00</a></div>
+</div></li><li class="item k-opt" data-id="10|1:42:30|보기표현|과태료 금액 찍기 요령" data-level="A" data-kind="보기표현" data-unit="u10">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-A">A 꼭 암기</span><span class="topic">과태료 금액 찍기 요령</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「과태료 ○○원 이하」</div>
+<div class="fact">시험의 과태료는 거의 다 <strong>1천만 원</strong>, 아닌 경우는 <strong>총 4개</strong>뿐(이 구간 2개 + 뒤에 2개). 과태료 문제에서 모르면 <strong>1천만 원</strong> 선택. 예: 보험회사가 보험사기 조사를 핑계로 보험금 지급을 지체·거절·삭감 → <strong>1천만 원 이하</strong> 과태료. (2:06:00 모집자 실명제 위반 설명에서도 '과태료는 웬만하면 1천만 원 이하'로 재강조) 예외 4개 = 의료기관 <strong>300만 원</strong>, 정비업체 <strong>100만 원 이하</strong>, 금소법 위반 <strong>1억 원 이하</strong>(2:10:00), 장애인 차별 시정명령 불이행 <strong>3천만 원 이하</strong>(2:13:30, 강사가 4번째라고 직접 말하지 않아 추정).</div>
+<div class="foot"><span class="emph">“헷갈리면 1천만 원 선택”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=6150" target="_blank" rel="noopener">▶ 1:42:30</a></div>
+</div></li><li class="item k-mem" data-id="10|1:43:00|암기|과태료 1천만 원 예외(의료기관·정비업체)" data-level="B" data-kind="암기" data-unit="u10">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">과태료 1천만 원 예외(의료기관·정비업체)</span></div>
+
+<div class="fact">1천만 원이 아닌 예외: ① 의료기관이 호전된 환자를 퇴원시키지 않음(나이롱 환자) → <strong>300만 원</strong> ② 정비업체 임의 수리·사전 견적서 미교부·재생품 사용 미고지 → <strong>100만 원 이하</strong>.</div>
+<div class="foot"><span class="emph">“천만 원이 아닌 예외 4개 중 2개”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=6180" target="_blank" rel="noopener">▶ 1:43:00</a></div>
+</div></li><li class="item k-mem" data-id="10|1:44:30|암기|음주운전 행정처벌" data-level="B" data-kind="암기" data-unit="u10">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">음주운전 행정처벌</span></div>
+
+<div class="fact">혈중알코올농도 <strong>0.03% 이상~0.08% 미만</strong> → <strong>면허정지 100일</strong>(정지 수준에서 사고 시 취소, <strong>2년</strong> 취득 불가). <strong>0.08% 이상</strong> 또는 <strong>측정 불응</strong> → <strong>면허취소</strong>, <strong>1년</strong> 취득 불가.</div>
+<div class="foot"><span class="emph">“빨간색 위주로 외우기”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=6270" target="_blank" rel="noopener">▶ 1:44:30</a></div>
+</div></li><li class="item k-mem" data-id="10|1:46:00|암기|음주운전 형사처벌(0.2%·2회)" data-level="A" data-kind="암기" data-unit="u10">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">음주운전 형사처벌(0.2%·2회)</span></div>
+
+<div class="fact">다 외우지 말고 이것만: <strong>0.2% 이상</strong>과 <strong>음주운전 2회 이상</strong> → <strong>2년 이상 5년 이하 징역</strong> 또는 <strong>1천만 원 이상 2천만 원 이하 벌금</strong>(자막 '0.1'은 0.2% 오인식).</div>
+<div class="foot"><span class="emph">“이렇게 묶어서 외우기”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=6360" target="_blank" rel="noopener">▶ 1:46:00</a></div>
+</div></li><li class="item k-mem" data-id="10|1:46:30|암기|음주 사고·어린이보호구역 사고 처벌" data-level="B" data-kind="암기" data-unit="u10">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">음주 사고·어린이보호구역 사고 처벌</span></div>
+
+<div class="fact">음주 사고: <strong>사망</strong> → <strong>무기 또는 3년 이상 징역</strong>, <strong>상해</strong> → <strong>1년 이상 15년 이하 징역</strong> 또는 <strong>1천만~3천만 원 벌금</strong>. 어린이보호구역 사고는 상해 벌금 하한만 <strong>500만 원</strong>(500만~3천만 원), 나머지는 동일.</div>
+<div class="foot"><span class="emph">“가성비 좋은 음주 사고 처벌 외우기”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=6390" target="_blank" rel="noopener">▶ 1:46:30</a></div>
+</div></li><li class="item k-mem" data-id="10|1:47:00|암기|벌점 면허정지·취소" data-level="A" data-kind="암기" data-unit="u10">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">벌점 면허정지·취소</span></div>
+
+<div class="fact">누적 벌점 <strong>40점</strong> 초과 → <strong>면허정지</strong>, <strong>1년간 121점</strong> 초과 → <strong>면허취소</strong>(강의 표현은 '초과', 법령은 '이상'으로 알려짐).</div>
+<div class="foot"><span class="emph">“최근 자주 출제, 꼭 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=6420" target="_blank" rel="noopener">▶ 1:47:00</a></div>
+</div></li><li class="item k-trap" data-id="10|1:48:00|틀린보기|회전교차로 진입 방법" data-level="A" data-kind="틀린보기" data-unit="u10">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">회전교차로 진입 방법</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「회전교차로 진입 시 무조건 일시정지하여야 한다」</div>
+<div class="fact">틀림. 모든 차의 운전자는 회전교차로 진입 시 <strong>서행 또는 일시정지</strong>.</div>
+<div class="foot"><span class="emph">“틀린 보기로 나옴”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=6480" target="_blank" rel="noopener">▶ 1:48:00</a></div>
+</div></li><li class="item k-trap" data-id="10|1:48:00|틀린보기|회전교차로 통행 우선권" data-level="A" data-kind="틀린보기" data-unit="u10">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">회전교차로 통행 우선권</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「진입하려는 차량이 우선한다」</div>
+<div class="fact">틀림. 통행 우선권은 <strong>이미 회전하고 있는 차량</strong>에 있음.</div>
+<div class="foot"><span class="emph">“틀린 보기로 나옴”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=6480" target="_blank" rel="noopener">▶ 1:48:00</a></div>
+</div></li></ol></section><section class="unit" id="u11"><h2><span>11. 손해보험의 법규와 약관</span><span class="uprog" data-prog="u11"></span></h2><ol class="items"><li class="item k-opt" data-id="11|1:49:30|보기표현|약관 미교부 시 취소" data-level="B" data-kind="보기표현" data-unit="u11">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">약관 미교부 시 취소</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「약관을 받지 못한 경우 취소할 수 있는 자」</div>
+<div class="fact">약관을 교부받지 못하면 <strong>계약자</strong>가 <strong>3개월 이내</strong> 계약 취소 가능. 누가 취소하느냐고 물으면 '<strong>계약자</strong>'.</div>
+<div class="foot"><span class="emph">“물어보면 계약자라고 답”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=6570" target="_blank" rel="noopener">▶ 1:49:30</a></div>
+</div></li><li class="item k-mem" data-id="11|1:51:00|암기|보험금 청구권자" data-level="A" data-kind="암기" data-unit="u11">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">보험금 청구권자</span></div>
+
+<div class="fact">인보험의 보험금 청구권자 = <strong>보험수익자</strong>, 손해보험 = <strong>피보험자</strong>(손해보험에는 수익자 개념 없음).</div>
+<div class="foot"><span class="emph">“꼭 기억하세요”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=6660" target="_blank" rel="noopener">▶ 1:51:00</a></div>
+</div></li><li class="item k-mem" data-id="11|1:51:00|암기|고지의무자" data-level="B" data-kind="암기" data-unit="u11">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">고지의무자</span></div>
+
+<div class="fact">고지의무자 = <strong>계약자·피보험자</strong>. <strong>수익자</strong>는 자격요건이 필요 없어 고지의무에서 <strong>빠짐</strong>. (단원4 0:26:00 '수익자' 오답 보기와 같은 내용)</div>
+<div class="foot"><span class="emph">“이 점도 봐 주시고요”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=6660" target="_blank" rel="noopener">▶ 1:51:00</a></div>
+</div></li><li class="item k-mem" data-id="11|1:52:00|암기|피보험자 vs 피보험이익" data-level="B" data-kind="암기" data-unit="u11">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">피보험자 vs 피보험이익</span></div>
+
+<div class="fact">보험사고의 대상이 <strong>사람</strong>이면 <strong>피보험자</strong>, <strong>물건</strong>(의 최고 한도)이면 <strong>피보험이익</strong>.</div>
+<div class="foot"><span class="emph">“간단하게 외우기”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=6720" target="_blank" rel="noopener">▶ 1:52:00</a></div>
+</div></li><li class="item k-mem" data-id="11|1:52:30|암기|피보험이익 확정성" data-level="A" data-kind="암기" data-unit="u11">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">피보험이익 확정성</span></div>
+
+<div class="fact">피보험이익 요건 = <strong>적법성·경제성·확정성</strong>. 확정성은 현재 확정된 이익뿐 아니라 <strong>장래의 이익도 확정 가능하면 인정</strong> → 강사가 '자주 틀리는 부분'으로 지목(오답 문장을 직접 제시하지는 않음). 피보험이익은 <strong>손해보험에만</strong> 있는 개념(생명보험에는 없음).</div>
+<div class="foot"><span class="emph">“자주 틀리는 부분, 주의”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=6750" target="_blank" rel="noopener">▶ 1:52:30</a></div>
+</div></li><li class="item k-mem" data-id="11|1:53:00|암기|보험료의 구성(재강조)" data-level="A" data-kind="암기" data-unit="u11">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">보험료의 구성(재강조)</span></div>
+
+<div class="fact">장기손해보험(단원4 0:31:30)에 이어 법규 단원에서 <strong>다시 나옴 → 중요한 내용</strong>. 영업보험료 = <strong>순보험료</strong>(위험보험료 + 저축보험료) + <strong>부가보험료</strong>(신계약비·유지비·수금비). 상세는 단원4 참조.</div>
+<div class="foot"><span class="emph">“두 번 나옴, 중요한 내용”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=6780" target="_blank" rel="noopener">▶ 1:53:00</a></div>
+</div></li><li class="item k-opt" data-id="11|1:53:30|보기표현|영업보험료 용어" data-level="B" data-kind="보기표현" data-unit="u11">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">영업보험료 용어</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「영업보험료」</div>
+<div class="fact"><strong>계약자가 납입한 보험료</strong>를 시험에서는 <strong>영업보험료</strong>라고 부름. (단원4 0:30:30과 같은 내용)</div>
+<div class="foot"><span class="emph">“시험에서 부르는 이름”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=6810" target="_blank" rel="noopener">▶ 1:53:30</a></div>
+</div></li><li class="item k-opt" data-id="11|1:54:00|보기표현|위험·저축보험료의 재원" data-level="B" data-kind="보기표현" data-unit="u11">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">위험·저축보험료의 재원</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「어떤 돈의 재원이 되는가」</div>
+<div class="fact"><strong>위험보험료</strong> → <strong>사고보험금</strong>의 재원, <strong>저축보험료</strong> → <strong>만기환급금·해약환급금</strong>의 재원.</div>
+<div class="foot"><span class="emph">“재원을 물어본다”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=6840" target="_blank" rel="noopener">▶ 1:54:00</a></div>
+</div></li><li class="item k-mem" data-id="11|1:54:00|암기|보험사고의 요건" data-level="B" data-kind="암기" data-unit="u11">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">보험사고의 요건</span></div>
+
+<div class="fact">보험사고의 요건 = <strong>불확실성, 발생성(교재상 발생가능성일 수 있음), 한정성, 적법성</strong> 등.</div>
+<div class="foot"><span class="emph">“간혹 출제, 바로 외우기”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=6840" target="_blank" rel="noopener">▶ 1:54:00</a></div>
+</div></li><li class="item k-opt" data-id="11|1:54:00|보기표현|보험사고 요건이 아닌 것" data-level="B" data-kind="보기표현" data-unit="u11">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">보험사고 요건이 아닌 것</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「고의 또는 불법 사고」</div>
+<div class="fact">'보험사고의 요건이 아닌 것을 고르시오' 문제 → <strong>고의 또는 불법 사고</strong> 선택(보험사고의 요건이 될 수 없음).</div>
+<div class="foot"><span class="emph">“이렇게 물어본다”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=6840" target="_blank" rel="noopener">▶ 1:54:00</a></div>
+</div></li><li class="item k-opt" data-id="11|1:55:00|보기표현|보험가액 vs 보험가입금액" data-level="A" data-kind="보기표현" data-unit="u11">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-A">A 꼭 암기</span><span class="topic">보험가액 vs 보험가입금액</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「법률적 가치 / 계약에 의한 가치」</div>
+<div class="fact"><strong>법률적(객관적) 가치</strong>를 물으면 <strong>보험가액</strong>(협의로 정할 수 없음), <strong>계약에 의한 가치</strong>를 물으면 <strong>보험가입금액</strong>(회사와 계약자가 협의해 정함).</div>
+<div class="foot"><span class="emph">“어렵고 중요한 개념”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=6900" target="_blank" rel="noopener">▶ 1:55:00</a></div>
+</div></li><li class="item k-mem" data-id="11|1:58:30|암기|전부·초과·일부보험 보상" data-level="A" data-kind="암기" data-unit="u11">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">전부·초과·일부보험 보상</span></div>
+
+<div class="fact">가입금액 ≥ 보험가액 → <strong>실손보상</strong>, 가입금액 &lt; 가액 → <strong>비례보상</strong>(예: 1억 물건에 5천만 가입, 손해 2천만 → 1천만 지급). 보상 한도는 둘 중 <strong>적은 쪽</strong>: 초과보험은 <strong>보험가액</strong>, 일부보험은 <strong>가입금액</strong>. 사기로 가입한 초과보험은 초과분만이 아니라 <strong>계약 전부 무효</strong>.</div>
+<div class="foot"><span class="emph">“어렵지만 중요, 여러 번 반복”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=7110" target="_blank" rel="noopener">▶ 1:58:30</a></div>
+</div></li><li class="item k-mem" data-id="11|1:58:30|암기|중복보험 vs 공동보험" data-level="A" data-kind="암기" data-unit="u11">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">중복보험 vs 공동보험</span></div>
+
+<div class="fact"><strong>중복보험</strong>: 여러 회사 가입으로 가입금액 합계 &gt; 가액 → <strong>실손보상</strong>, 가입 비율대로 나눠 책임(<strong>연대비례책임</strong>), 한도는 <strong>보험가액</strong>. <strong>공동보험</strong>: 합계 ≤ 가액 → 같으면 실손, 적으면 <strong>비례보상</strong>, 한도는 <strong>가입금액</strong>.</div>
+<div class="foot"><span class="emph">“어렵지만 중요, 여러 번 반복”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=7110" target="_blank" rel="noopener">▶ 1:58:30</a></div>
+</div></li><li class="item k-trap" data-id="11|2:00:00|틀린보기|불요식 계약성" data-level="A" data-kind="틀린보기" data-unit="u11">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">불요식 계약성</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「보험계약 체결에는 특별한 형식이 필요하다(요식계약성)」</div>
+<div class="fact">틀림. 보험계약은 체결 시 일정한 형식이 필요 없는 <strong>불요식 계약</strong>. '특별한 형식이 필요하다'(요식계약성)는 틀린 보기.</div>
+<div class="foot"><span class="emph">“틀린 보기로 나옴”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=7200" target="_blank" rel="noopener">▶ 2:00:00</a></div>
+</div></li><li class="item k-opt" data-id="11|2:00:00|보기표현|사행계약성 키워드" data-level="B" data-kind="보기표현" data-unit="u11">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">사행계약성 키워드</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「우연한 사고, 불확정성, 불일치성」</div>
+<div class="fact">보험금이 우연한 사고에 따라 지급되므로 <strong>사행계약성</strong>. 보기에 <strong>우연한 사고, 불확정성, 불일치성</strong> 키워드가 보이면 사행계약성 선택.</div>
+<div class="foot"><span class="emph">“키워드는 우연한 사고”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=7200" target="_blank" rel="noopener">▶ 2:00:00</a></div>
+</div></li><li class="item k-opt" data-id="11|2:00:30|보기표현|부합계약성 키워드" data-level="B" data-kind="보기표현" data-unit="u11">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">부합계약성 키워드</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「약관」</div>
+<div class="fact"><strong>부합계약성</strong> = 고객이 정형화된 약관을 <strong>포괄적으로 승인</strong>해야 하는 성질(일부만 받아들이고 일부 거부 불가). 부합계약성 키워드 = <strong>약관</strong>.</div>
+<div class="foot"><span class="emph">“나오면 키워드로 약관”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=7230" target="_blank" rel="noopener">▶ 2:00:30</a></div>
+</div></li><li class="item k-opt" data-id="11|2:03:30|보기표현|잔존물대위(목적물 대위)" data-level="B" data-kind="보기표현" data-unit="u11">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">잔존물대위(목적물 대위)</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「잔존물대위」</div>
+<div class="fact">목적물에 대한 대위는 시험에서 <strong>잔존물대위</strong>로도 표현. 목적물이 <strong>전부 멸실</strong>된 수준이고 보험금을 <strong>전부 지급</strong>했을 때만 권리 이전, <strong>일부만 지급</strong>하면 이전 X.</div>
+<div class="foot"><span class="emph">“시험에서는 잔존대위라고도”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=7410" target="_blank" rel="noopener">▶ 2:03:30</a></div>
+</div></li><li class="item k-mem" data-id="11|2:04:00|암기|보험자대위 개념" data-level="A" data-kind="암기" data-unit="u11">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">보험자대위 개념</span></div>
+
+<div class="fact"><strong>보험자대위</strong>: 보험회사가 손해 보상 후 피보험자가 가진 <strong>보험의 목적</strong>이나 <strong>제3자에 대한 권리</strong>를 취득하는 것(<strong>이득금지 원칙</strong>). 물건에 대해 인정, <strong>인보험에서는 원칙적으로 불인정</strong>. 종류는 목적물 대위·제3자 대위 두 가지.</div>
+<div class="foot"><span class="emph">“꼭 제대로 이해하고 넘어가라”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=7440" target="_blank" rel="noopener">▶ 2:04:00</a></div>
+</div></li><li class="item k-mem" data-id="11|2:04:00|암기|청구권대위 일부 지급" data-level="A" data-kind="암기" data-unit="u11">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">청구권대위 일부 지급</span></div>
+
+<div class="fact">제3자에 대한 대위(<strong>청구권대위</strong>)는 제3자의 <strong>불법행위와 채무불이행</strong> 모두 포함. 보험금 <strong>전부 지급</strong>은 물론 <strong>일부만 지급</strong>해도 <strong>지급한 범위 내에서</strong> 대위권 행사 가능(잔존물대위는 전부 지급해야 함).</div>
+<div class="foot"><span class="emph">“기억해 두세요”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=7440" target="_blank" rel="noopener">▶ 2:04:00</a></div>
+</div></li><li class="item k-mem" data-id="11|2:04:30|암기|사업 개시 자본금" data-level="A" data-kind="암기" data-unit="u11">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">사업 개시 자본금</span></div>
+
+<div class="fact">보증보험·재보험 <strong>300억</strong>, 자동차보험 <strong>200억</strong>, 해상보험 <strong>150억</strong>, 화재·책임·제3보험(상해·질병·간병) <strong>100억</strong>, 외국 보험회사 <strong>30억</strong>, 소액 전문 보험회사 <strong>20억</strong>.</div>
+<div class="foot"><span class="emph">“단순한 암기 문제”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=7470" target="_blank" rel="noopener">▶ 2:04:30</a></div>
+</div></li><li class="item k-opt" data-id="11|2:05:00|보기표현|소액 전문 보험회사 예" data-level="B" data-kind="보기표현" data-unit="u11">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">소액 전문 보험회사 예</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「날씨·도난·동물 관련 보험」</div>
+<div class="fact">어떤 보험이 소액 전문 보험회사 대상인지도 출제 가능. <strong>날씨, 도난, 동물</strong> 관련 보험 = 소액 전문 보험회사 대상(자본금 <strong>20억</strong>).</div>
+<div class="foot"><span class="emph">“질문도 나올 수 있으니”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=7500" target="_blank" rel="noopener">▶ 2:05:00</a></div>
+</div></li></ol></section><section class="unit" id="u12"><h2><span>12. 완전판매·모집 준수사항</span><span class="uprog" data-prog="u12"></span></h2><ol class="items"><li class="item k-trap" data-id="12|2:06:00|틀린보기|모집자 실명제 표시 항목" data-level="B" data-kind="틀린보기" data-unit="u12">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-B">B 기억</span><span class="topic">모집자 실명제 표시 항목</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「주민등록번호를 표시해야 한다」</div>
+<div class="fact">설계사가 자료 발행 시 표시 항목 = <strong>소속, 연락처, 성명</strong>. 주민등록번호는 개인정보라 들어가면 안 됨 → 틀린 보기. 하나라도 빠지면 <strong>1천만 원 이하 과태료</strong>.</div>
+<div class="foot"><span class="emph">“틀림 보기로 주민번호”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=7560" target="_blank" rel="noopener">▶ 2:06:00</a></div>
+</div></li><li class="item k-opt" data-id="12|2:06:00|보기표현|설명의무 면제" data-level="B" data-kind="보기표현" data-unit="u12">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">설명의무 면제</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「상품 설명의무가 면제되는 경우」</div>
+<div class="fact">설명의무가 <strong>면제되는 경우</strong> 출제: ① <strong>전문보험계약자</strong>(규모가 크고 안정적인 단체) ② <strong>동일한 조건으로 갱신</strong> ③ 가입 조건을 <strong>미리 정한 범위 안에서 계속 체결</strong>하는 경우.</div>
+<div class="foot"><span class="emph">“면제되는 경우를 물어봄”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=7560" target="_blank" rel="noopener">▶ 2:06:00</a></div>
+</div></li><li class="item k-mem" data-id="12|2:07:30|암기|보험료 특별약정서 조건" data-level="B" data-kind="암기" data-unit="u12">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">보험료 특별약정서 조건</span></div>
+
+<div class="fact">보험료는 보험기간 시작 전 <strong>사전 수납이 원칙</strong>, <strong>특별약정서</strong>가 있으면 시작 후 수납도 가능. 특별약정서 조건(두 가지 모두): 과거 <strong>6개월간 월평균 계약 25건 이상</strong>, <strong>월평균 보험료 500만 원 이상</strong>.</div>
+<div class="foot"><span class="emph">“조건을 기억해 주세요”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=7650" target="_blank" rel="noopener">▶ 2:07:30</a></div>
+</div></li><li class="item k-mem" data-id="12|2:07:30|암기|보험료 수납 수단" data-level="B" data-kind="암기" data-unit="u12">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">보험료 수납 수단</span></div>
+
+<div class="fact">보험료는 <strong>현금 수납이 원칙</strong>. <strong>비가계성 보험</strong>은 <strong>1개월 안에 결제되는 수표</strong>도 수납 가능.</div>
+<div class="foot"><span class="emph">“빨간색 부분 눈에 익혀라”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=7650" target="_blank" rel="noopener">▶ 2:07:30</a></div>
+</div></li><li class="item k-mem" data-id="12|2:08:30|암기|실손 중복가입 확인 절차" data-level="A" data-kind="암기" data-unit="u12">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">실손 중복가입 확인 절차</span></div>
+
+<div class="fact">순서: ① 고객에게 <strong>중복가입 조회 동의서 사전 징구</strong> → ② <strong>중복가입 조회</strong> → ③ <strong>결과를 고객에게 안내</strong> → ④ 이미 가입되어 있으면 <strong>비례보상</strong> 충분히 설명 → ⑤ <strong>청약서 작성</strong>.</div>
+<div class="foot"><span class="emph">“순서는 꼭 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=7710" target="_blank" rel="noopener">▶ 2:08:30</a></div>
+</div></li><li class="item k-mem" data-id="12|2:09:00|암기|단계별 안내 자료" data-level="A" data-kind="암기" data-unit="u12">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">단계별 안내 자료</span></div>
+
+<div class="fact"><strong>권유 단계</strong>: 가입설계서, <strong>상품설명서</strong> / <strong>체결 단계</strong>: 청약서, 보험약관, 보험증권 / <strong>유지 단계</strong>: 계약 관리 내용. <strong>상품설명서는 권유 단계</strong> 자료라는 점이 헷갈리기 쉬움.</div>
+<div class="foot"><span class="emph">“헷갈리니 확실하게 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=7740" target="_blank" rel="noopener">▶ 2:09:00</a></div>
+</div></li><li class="item k-opt" data-id="12|2:10:00|보기표현|금소법 과태료 예외" data-level="B" data-kind="보기표현" data-unit="u12">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">금소법 과태료 예외</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「금융소비자보호법(금소법) 위반 과태료」</div>
+<div class="fact">과태료는 웬만하면 1천만 원 선택, 단 문제에 <strong>금소법</strong>(금융소비자 보호에 관한 법률)이 나오면 <strong>1억 원 이하 과태료</strong>.</div>
+<div class="foot"><span class="emph">“금소법 나오면 1억 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=7800" target="_blank" rel="noopener">▶ 2:10:00</a></div>
+</div></li><li class="item k-mem" data-id="12|2:12:00|암기|협정 제재금: 특별이익" data-level="A" data-kind="암기" data-unit="u12">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">협정 제재금: 특별이익</span></div>
+
+<div class="fact">협정 준수사항은 <strong>특별이익·경유계약·승환계약</strong> 세 가지만이라도 암기. 특별이익 제공 제재금: <strong>임직원</strong> = <strong>연납보험료 전액 + 제공한 이익</strong>, <strong>모집종사자</strong> = <strong>연납보험료 50% + 제공한 이익</strong>. <strong>약속만</strong> 해도 <strong>연납보험료 20%</strong>.</div>
+<div class="foot"><span class="emph">“세 가지만이라도 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=7920" target="_blank" rel="noopener">▶ 2:12:00</a></div>
+</div></li><li class="item k-mem" data-id="12|2:12:00|암기|협정 제재금: 경유계약" data-level="A" data-kind="암기" data-unit="u12">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">협정 제재금: 경유계약</span></div>
+
+<div class="fact">경유계약 제재금: <strong>임직원이 모집종사자를 경유</strong> → <strong>모집수당 전액</strong>, <strong>모집종사자끼리 경유</strong> → <strong>모집수당 50%</strong>. 임직원을 더 강하게 제재.</div>
+<div class="foot"><span class="emph">“세 가지만이라도 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=7920" target="_blank" rel="noopener">▶ 2:12:00</a></div>
+</div></li><li class="item k-mem" data-id="12|2:12:00|암기|협정 제재금: 승환계약" data-level="A" data-kind="암기" data-unit="u12">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">협정 제재금: 승환계약</span></div>
+
+<div class="fact">승환계약 제재금: 계약 <strong>1건당 100만 원</strong>, <strong>1인당 한도 3천만 원</strong>.</div>
+<div class="foot"><span class="emph">“세 가지만이라도 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=7920" target="_blank" rel="noopener">▶ 2:12:00</a></div>
+</div></li><li class="item k-trap" data-id="12|2:12:00|틀린보기|허위사실 유포 제재금 대상" data-level="B" data-kind="틀린보기" data-unit="u12">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-B">B 기억</span><span class="topic">허위사실 유포 제재금 대상</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「다른 설계사에 대한 허위사실 유포에 제재금 부과」</div>
+<div class="fact">틀림. 제재금은 <strong>다른 보험회사</strong>에 대한 허위사실 유포에 부과, <strong>다른 설계사</strong>에 대한 유포는 부과 대상 <strong>아님</strong>. 허위사실 유포는 제재금 액수보다 <strong>대상</strong>이 포인트.</div>
+<div class="foot"><span class="emph">“액수보다 대상이 포인트”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=7920" target="_blank" rel="noopener">▶ 2:12:00</a></div>
+</div></li><li class="item k-mem" data-id="12|2:12:30|암기|장애인 차별 처벌" data-level="A" data-kind="암기" data-unit="u12">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">장애인 차별 처벌</span></div>
+
+<div class="fact">정당한 사유 없이 장애인이라는 이유만으로 차별하면 형사처벌: <strong>3년 이하 징역 또는 3천만 원 이하 벌금</strong>. 암기법 <strong>'장삼'</strong>(장애인 → 3년/3천만 원). (참고: 인권위 시정 권고 → 법무부장관 시정명령, 시정명령 불이행 시 <strong>3천만 원 이하 과태료</strong> = 1천만 원이 아닌 과태료 예외로 추정)</div>
+<div class="foot"><span class="emph">“장삼으로 외워라”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=7950" target="_blank" rel="noopener">▶ 2:12:30</a></div>
+</div></li><li class="item k-opt" data-id="12|2:13:30|보기표현|장애인 차별 신고센터" data-level="B" data-kind="보기표현" data-unit="u12">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">장애인 차별 신고센터</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「장애인 차별 신고센터 운영 기관」</div>
+<div class="fact">신고센터 운영 기관을 물으면 <strong>손해보험협회</strong>. 신고는 차별받은 <strong>장애인, 장기기증자 본인 또는 대리인</strong>이 하며, <strong>보험회사 직원은 신고 불가</strong>.</div>
+<div class="foot"><span class="emph">“어디서 운영하냐고 물어보면”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=8010" target="_blank" rel="noopener">▶ 2:13:30</a></div>
+</div></li></ol></section><section class="unit" id="u13"><h2><span>13. 제3보험 개요</span><span class="uprog" data-prog="u13"></span></h2><ol class="items"><li class="item k-mem" data-id="13|2:17:30|암기|제3보험 보상방법·다수가입" data-level="A" data-kind="암기" data-unit="u13">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">제3보험 보상방법·다수가입</span></div>
+
+<div class="fact">제3보험(상해·질병·간병)은 <strong>정액보상과 실손보상 모두 가능</strong>(<strong>그레이존</strong>). 여러 개 가입 시 정액보험은 <strong>중복보상</strong>, 실손보험은 <strong>비례보상</strong>.</div>
+<div class="foot"><span class="emph">“가장 기본 페이지, 꼭 이해”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=8250" target="_blank" rel="noopener">▶ 2:17:30</a></div>
+</div></li><li class="item k-trap" data-id="13|2:17:30|틀린보기|제3보험 관련 법령" data-level="B" data-kind="틀린보기" data-unit="u13">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-B">B 기억</span><span class="topic">제3보험 관련 법령</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「의료법」</div>
+<div class="fact">제3보험 관련 법령 = <strong>보험업법, 시행령, 시행규칙, 감독규정</strong> 등. <strong>의료법</strong>은 무관한 법인데 가끔 틀린 보기로 출제.</div>
+<div class="foot"><span class="emph">“가끔 틀림 보기로 나옴”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=8250" target="_blank" rel="noopener">▶ 2:17:30</a></div>
+</div></li><li class="item k-opt" data-id="13|2:18:00|보기표현|제3보험 겸영 여부" data-level="B" data-kind="보기표현" data-unit="u13">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">제3보험 겸영 여부</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「생명보험회사도 제3보험을 판매할 수 있다」</div>
+<div class="fact">겸영 여부를 물으면 <strong>생명보험회사</strong>·<strong>손해보험회사</strong> 모두 제3보험 판매 <strong>가능</strong>. 단 생보사의 손해보험 판매, 손보사의 생명보험 판매는 <strong>불가</strong>.</div>
+<div class="foot"><span class="emph">“겸영 여부를 물어볼 때는”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=8280" target="_blank" rel="noopener">▶ 2:18:00</a></div>
+</div></li><li class="item k-mem" data-id="13|2:20:00|암기|제3보험 상품개발 기준" data-level="A" data-kind="암기" data-unit="u13">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-A">A 꼭 암기</span><span class="topic">제3보험 상품개발 기준</span></div>
+
+<div class="fact">제3보험은 원칙적으로 <strong>보장성으로만</strong> 개발(보장성: 만기환급금 <strong>≤</strong> 납입보험료, 저축성: <strong>&gt;</strong>). 예외로 <strong>손보사의 상해보험</strong>만 <strong>저축성</strong>도 개발 가능, <strong>생보사</strong>는 상해·질병·간병 <strong>모두 보장성만</strong> 가능.</div>
+<div class="foot"><span class="emph">“출제빈도 높음, 꼭 기억”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=8400" target="_blank" rel="noopener">▶ 2:20:00</a></div>
+</div></li></ol></section><section class="unit" id="u14"><h2><span>14. 상해보험</span><span class="uprog" data-prog="u14"></span></h2><ol class="items"><li class="item k-mem" data-id="14|2:20:30|암기|상해 3요건" data-level="B" data-kind="암기" data-unit="u14">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">상해 3요건</span></div>
+
+<div class="fact">상해사고로 인정되려면 <strong>우연성·급격성·외래성</strong> 3요건을 <strong>동시에 모두</strong> 충족해야 보상, <strong>2개만 충족하면 보상 X</strong>. (우연성 = 의사에 기인하지 않음, 급격성 = 피할 수 없을 만큼 급박함, 외래성 = 외래적 요인)</div>
+<div class="foot"><span class="emph">“쉬운 내용, 충분히 풀 수 있음”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=8430" target="_blank" rel="noopener">▶ 2:20:30</a></div>
+</div></li><li class="item k-trap" data-id="14|2:21:00|틀린보기|상해보험과 보험가액" data-level="B" data-kind="틀린보기" data-unit="u14">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-B">B 기억</span><span class="topic">상해보험과 보험가액</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「상해보험은 보험가액의 범위 내에서 보상한다」</div>
+<div class="fact">보험가액은 <strong>물건의 객관적 가치</strong>라 사람(상해)에는 사용 불가 → 이 보기는 전부 틀림. 맞는 보기는 '<strong>보험가입금액 한도 내</strong> 보상'.</div>
+<div class="foot"><span class="emph">“이 보기는 전부 틀림”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=8460" target="_blank" rel="noopener">▶ 2:21:00</a></div>
+</div></li><li class="item k-mem" data-id="14|2:22:00|암기|보험수익자 변경" data-level="B" data-kind="암기" data-unit="u14">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">보험수익자 변경</span></div>
+
+<div class="fact">계약자가 수익자 변경 시 <strong>피보험자의 동의</strong>를 얻은 뒤 보험회사에 <strong>통보</strong>. 보험회사의 <strong>승낙은 불필요</strong>.</div>
+<div class="foot"><span class="emph">“기억해 주세요”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=8520" target="_blank" rel="noopener">▶ 2:22:00</a></div>
+</div></li><li class="item k-opt" data-id="14|2:22:00|보기표현|중대한 과실 보상" data-level="B" data-kind="보기표현" data-unit="u14">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">중대한 과실 보상</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「중대한 과실에 따른 보험사고에 대해서는 책임을 면할 수 없다」</div>
+<div class="fact">'책임을 면할 수 없다' = <strong>보상한다</strong>는 뜻. 사람 보험(상해)은 <strong>중과실 사고도 보상</strong>, <strong>고의만 면책</strong>(보상 X). 물건·재산 보험은 고의·중과실 모두 보상 X.</div>
+<div class="foot"><span class="emph">“시험 문장 표현”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=8520" target="_blank" rel="noopener">▶ 2:22:00</a></div>
+</div></li><li class="item k-trap" data-id="14|2:23:00|틀린보기|직업급수 고려 요소" data-level="B" data-kind="틀린보기" data-unit="u14">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-B">B 기억</span><span class="topic">직업급수 고려 요소</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「가족의 질병 이력 / 근무 연수」</div>
+<div class="fact">직업급수를 정할 때 <strong>가족의 질병 이력·근무 연수</strong>는 <strong>고려 대상 아님</strong> → 고려 요소로 나오면 틀림. 직업급수는 1~3급, 숫자가 클수록 위험한 직업이라 <strong>보험료 ↑</strong>: 1급 <strong>사무직</strong>, 2급 <strong>항공기 정비공</strong>, 3급 <strong>영업용 자동차 운전자</strong>.</div>
+<div class="foot"><span class="emph">“고려 대상 아님, 아시겠죠?”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=8580" target="_blank" rel="noopener">▶ 2:23:00</a></div>
+</div></li><li class="item k-opt" data-id="14|2:23:30|보기표현|단체 구분(2종 법정단체)" data-level="B" data-kind="보기표현" data-unit="u14">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">단체 구분(2종 법정단체)</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「비영리법인, 변호사회, 의사회」</div>
+<div class="fact"><strong>'법'(법인·변호사회 등)이 나오면 2종 단체(법정단체)</strong>. 1종 = 급여단체(회사·사업장·관공서 등 근로자를 고용하는 단체), 3종 = 규약단체(구성원이 명확하고 동질성 확보). '5인 이상'은 1~3종 공통이라 암기 불필요.</div>
+<div class="foot"><span class="emph">“법이 나오면 2종”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=8610" target="_blank" rel="noopener">▶ 2:23:30</a></div>
+</div></li><li class="item k-mem" data-id="14|2:25:00|암기|교통상해 교통수단 구분" data-level="B" data-kind="암기" data-unit="u14">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">교통상해 교통수단 구분</span></div>
+
+<div class="fact">교통상해보험은 <strong>자동차</strong>와 <strong>기타 교통수단</strong>을 구분할 줄 알아야 함. 자동차 = 자동차·화물차·특수차·<strong>이륜차</strong>·트럭 등, 기타 교통수단 = <strong>케이블카·리프트·에스컬레이터</strong> 등.</div>
+<div class="foot"><span class="emph">“구분할 줄 아셔야”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=8700" target="_blank" rel="noopener">▶ 2:25:00</a></div>
+</div></li><li class="item k-mem" data-id="14|2:25:30|암기|휴일교통상해 책임의 시기" data-level="B" data-kind="암기" data-unit="u14">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">휴일교통상해 책임의 시기</span></div>
+
+<div class="fact">책임의 시기는 <strong>사고 발생지의 표준시</strong> 기준, 보험 <strong>가입 지역의 표준시 아님</strong>.</div>
+<div class="foot"><span class="emph">“책임의 시기가 중요”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=8730" target="_blank" rel="noopener">▶ 2:25:30</a></div>
+</div></li></ol></section><section class="unit" id="u15"><h2><span>15. 실손의료보험</span><span class="uprog" data-prog="u15"></span></h2><ol class="items"><li class="item k-mem" data-id="15|2:30:00|암기|실손 재가입주기" data-level="B" data-kind="암기" data-unit="u15">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">실손 재가입주기</span></div>
+
+<div class="fact">4세대 실손 재가입주기 = <strong>5년</strong>(가입 후 5년 경과 시 그때 판매 중인 상품으로 재가입). <strong>노후실손·유병자실손은 3년</strong>.</div>
+<div class="foot"><span class="emph">“3년 기억해 주세요”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=9000" target="_blank" rel="noopener">▶ 2:30:00</a></div>
+</div></li><li class="item k-mem" data-id="15|2:31:00|암기|비급여 보험료 차등제(범위)" data-level="B" data-kind="암기" data-unit="u15">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">🧠 암기</span><span class="badge b-B">B 기억</span><span class="topic">비급여 보험료 차등제(범위)</span></div>
+
+<div class="fact">할인·할증 %와 금액은 암기 불필요. 4세대 실손 <strong>비급여</strong> 보험료는 개인별 보험금 수령액에 따라 <strong>할인 또는 할증</strong>으로 차등 적용(<strong>할증만 있는 것 아님</strong>)이라는 점만 알면 됨. (참고: 직전 1년 무수령 시 약 <strong>5%</strong> 할인, <strong>100만 원</strong>까지 종전 유지, 초과 시 <strong>100~300%</strong> 할증)</div>
+<div class="foot"><span class="emph">“% 외우기보다 개념만”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=9060" target="_blank" rel="noopener">▶ 2:31:00</a></div>
+</div></li><li class="item k-opt" data-id="15|2:31:30|보기표현|차등 적용 제외 의료취약계층" data-level="B" data-kind="보기표현" data-unit="u15">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">차등 적용 제외 의료취약계층</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「비급여 차등 적용 제외 대상(의료 취약 계층)」</div>
+<div class="fact">의료 취약 계층이 누구인지 묻는 문제 출제. <strong>산정특례 대상자</strong>(암·심장질환자 등, 정부가 급여 의료비 최대 <strong>95%</strong> 지원)와 장기요양 <strong>1등급·2등급</strong> 판정자는 비급여 차등 적용에서 <strong>제외</strong>.</div>
+<div class="foot"><span class="emph">“누군지 묻는 문제 나옴”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=9090" target="_blank" rel="noopener">▶ 2:31:30</a></div>
+</div></li></ol></section><section class="unit" id="u16"><h2><span>16. 질병·CI·어린이·치아보험</span><span class="uprog" data-prog="u16"></span></h2><ol class="items"><li class="item k-trap" data-id="16|2:32:00|틀린보기|질병보험 보험료 결정요인" data-level="B" data-kind="틀린보기" data-unit="u16">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-B">B 기억</span><span class="topic">질병보험 보험료 결정요인</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「직업과 직무에 따라 보험료가 결정된다」</div>
+<div class="fact">질병보험 보험료는 <strong>피보험자의 연령과 건강상태</strong>로 결정. '직업·직무'는 <strong>상해보험</strong>의 요인 → 질병보험 보기에 나오면 틀림.</div>
+<div class="foot"><span class="emph">“틀림 보기로 나옴”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=9120" target="_blank" rel="noopener">▶ 2:32:00</a></div>
+</div></li><li class="item k-opt" data-id="16|2:32:30|보기표현|대기기간 = 면책기간" data-level="B" data-kind="보기표현" data-unit="u16">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">대기기간 = 면책기간</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「면책기간을 설정한다」</div>
+<div class="fact">보기에서 '대기기간' 대신 '<strong>면책기간</strong>'이라는 단어도 많이 사용. 두 말은 <strong>같은 뜻</strong>(회사가 보장하지 않는 기간).</div>
+<div class="foot"><span class="emph">“면책기간 쓰는 보기 많음”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=9150" target="_blank" rel="noopener">▶ 2:32:30</a></div>
+</div></li><li class="item k-opt" data-id="16|2:33:00|보기표현|면책기간 설정 목적" data-level="B" data-kind="보기표현" data-unit="u16">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">면책기간 설정 목적</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「역선택 또는 도덕적 해이 방지」</div>
+<div class="fact">질병보험 면책(대기)기간을 두는 이유 = 정보 불균형을 숨긴 가입·보험 악용 방지. 시험에서는 '<strong>역선택 또는 도덕적 해이를 방지</strong>하기 위한 목적'으로 출제.</div>
+<div class="foot"><span class="emph">“시험에 나오는 단어”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=9180" target="_blank" rel="noopener">▶ 2:33:00</a></div>
+</div></li><li class="item k-trap" data-id="16|2:33:30|틀린보기|CI보험 사망보험금 선지급" data-level="B" data-kind="틀린보기" data-unit="u16">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">❌ 틀린 보기</span><span class="badge b-B">B 기억</span><span class="topic">CI보험 사망보험금 선지급</span></div>
+<div class="option"><span class="olabel">이런 보기 → 틀림</span>「사망보험금의 80%(또는 전액)를 미리 지급한다」</div>
+<div class="fact">치명적 질병으로 <strong>잔여 수명 6개월 이하</strong>이면 사망보험금의 <strong>50%</strong> 선지급(강의 기준). '80% 선지급'·'전액 선지급' 보기는 틀림.</div>
+<div class="foot"><span class="emph">“80%·전액은 틀림 보기”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=9210" target="_blank" rel="noopener">▶ 2:33:30</a></div>
+</div></li><li class="item k-opt" data-id="16|2:34:00|보기표현|치아보험 면책·감액기간" data-level="B" data-kind="보기표현" data-unit="u16">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">치아보험 면책·감액기간</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「치아보험의 면책기간」</div>
+<div class="fact">치아보험은 <strong>면책기간</strong>을 출제. <strong>크라운</strong>: 면책 <strong>90일 또는 180일</strong> 이내, <strong>1년</strong> 이내는 <strong>50% 감액</strong> 지급. <strong>틀니·브릿지·임플란트</strong>: 면책 <strong>180일 또는 1년</strong> 범위, <strong>2년</strong> 이내는 <strong>50% 감액</strong> 지급.</div>
+<div class="foot"><span class="emph">“면책기간을 물어봄”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=9240" target="_blank" rel="noopener">▶ 2:34:00</a></div>
+</div></li></ol></section><section class="unit" id="u17"><h2><span>17. 간병보험</span><span class="uprog" data-prog="u17"></span></h2><ol class="items"><li class="item k-opt" data-id="17|2:34:30|보기표현|장기요양등급 개수" data-level="B" data-kind="보기표현" data-unit="u17">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">장기요양등급 개수</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「장기요양등급은 총 몇 개로 구분되는가」</div>
+<div class="fact"><strong>1~5등급 + 인지지원등급 = 총 6개</strong> 등급.</div>
+<div class="foot"><span class="emph">“총 몇 개냐고 물음”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=9270" target="_blank" rel="noopener">▶ 2:34:30</a></div>
+</div></li><li class="item k-opt" data-id="17|2:35:00|보기표현|가장 심각한 장기요양등급" data-level="B" data-kind="보기표현" data-unit="u17">
+<label class="chk" title="외웠으면 체크"><input type="checkbox" aria-label="외움 표시"><span></span></label>
+<div class="ibody">
+<div class="meta"><span class="kind">📝 보기 표현</span><span class="badge b-B">B 기억</span><span class="topic">가장 심각한 장기요양등급</span></div>
+<div class="option"><span class="olabel">보기·문제 표현</span>「가장 심각한 상태는 몇 등급인가」</div>
+<div class="fact"><strong>1등급</strong>이 가장 심한 상태.</div>
+<div class="foot"><span class="emph">“가장 심한 등급 물음”</span><a class="ts" href="https://youtu.be/L7tWJSk8q5k?t=9300" target="_blank" rel="noopener">▶ 2:35:00</a></div>
+</div></li></ol></section>
+  </main>
+  <p class="empty" id="empty">조건에 맞는 항목이 없어요. 필터를 바꿔 보세요.</p>
+</div>
+<button class="btn" id="toTop" aria-label="맨 위로">↑ 맨 위</button>
+<script>
+(function () {
+  var root = document.documentElement, body = document.body;
+  var store = {
+    get: function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+    set: function (k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  };
+  var saved = store.get('theme');
+  if (saved === 'dark' || saved === 'light') root.setAttribute('data-theme', saved);
+  document.getElementById('themeBtn').addEventListener('click', function () {
+    var cur = root.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    var next = cur === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next); store.set('theme', next);
+  });
+
+  var items = Array.prototype.slice.call(document.querySelectorAll('.item'));
+  var done = {};
+  try { done = JSON.parse(store.get('memo-done') || '{}') || {}; } catch (e) { done = {}; }
+  var state = { kind: 'all', s: false, todo: false };
+
+  function save() { store.set('memo-done', JSON.stringify(done)); }
+  function progress() {
+    var n = 0, per = {};
+    items.forEach(function (it) {
+      var u = it.getAttribute('data-unit');
+      per[u] = per[u] || [0, 0]; per[u][1]++;
+      if (done[it.getAttribute('data-id')]) { n++; per[u][0]++; }
+    });
+    document.getElementById('pfill').style.width = (items.length ? n / items.length * 100 : 0) + '%';
+    document.getElementById('ptext').textContent = n + ' / ' + items.length;
+    Object.keys(per).forEach(function (u) {
+      var el = document.querySelector('[data-prog="' + u + '"]');
+      if (el) { el.textContent = '✓ ' + per[u][0] + '/' + per[u][1]; el.classList.toggle('full', per[u][0] === per[u][1]); }
+    });
+  }
+  function apply() {
+    var shown = 0, perUnit = {};
+    items.forEach(function (it) {
+      var id = it.getAttribute('data-id');
+      var vis = (state.kind === 'all' || it.getAttribute('data-kind') === state.kind)
+        && (!state.s || it.getAttribute('data-level') === 'S')
+        && (!state.todo || !done[id]);
+      it.classList.toggle('hidden', !vis);
+      if (vis) { shown++; perUnit[it.getAttribute('data-unit')] = (perUnit[it.getAttribute('data-unit')] || 0) + 1; }
+    });
+    document.querySelectorAll('.unit').forEach(function (s) { s.style.display = perUnit[s.id] ? '' : 'none'; });
+    document.querySelectorAll('[data-cnt]').forEach(function (c) {
+      var n = perUnit[c.getAttribute('data-cnt')] || 0;
+      c.textContent = n; c.parentNode.style.display = n ? '' : 'none';
+    });
+    document.getElementById('empty').style.display = shown ? 'none' : 'block';
+  }
+
+  items.forEach(function (it) {
+    var id = it.getAttribute('data-id'), cb = it.querySelector('input');
+    cb.checked = !!done[id]; it.classList.toggle('done', !!done[id]);
+    cb.addEventListener('change', function () {
+      if (cb.checked) done[id] = 1; else delete done[id];
+      it.classList.toggle('done', cb.checked); save(); progress();
+      if (state.todo && cb.checked) setTimeout(apply, 350);
+    });
+    var fact = it.querySelector('.fact');
+    var hint = document.createElement('div'); hint.className = 'quizhint'; hint.textContent = '탭하면 설명이 보여요';
+    fact.parentNode.insertBefore(hint, fact.nextSibling);
+    fact.addEventListener('click', function () { if (body.classList.contains('quiz')) it.classList.toggle('reveal'); });
+    hint.addEventListener('click', function () { it.classList.toggle('reveal'); });
+  });
+
+  document.querySelectorAll('[data-kind]').forEach(function (b) {
+    if (b.tagName !== 'BUTTON') return;
+    b.addEventListener('click', function () {
+      state.kind = b.getAttribute('data-kind');
+      document.querySelectorAll('button[data-kind]').forEach(function (x) { x.setAttribute('aria-pressed', x === b); });
+      apply();
+    });
+  });
+  function toggle(btnId, key) {
+    var b = document.getElementById(btnId);
+    b.addEventListener('click', function () { state[key] = !state[key]; b.setAttribute('aria-pressed', state[key]); apply(); });
+  }
+  toggle('sOnly', 's'); toggle('todoOnly', 'todo');
+  document.getElementById('resetBtn').addEventListener('click', function () {
+    if (!confirm('외움 체크를 모두 지울까요?')) return;
+    done = {}; save();
+    items.forEach(function (it) { it.querySelector('input').checked = false; it.classList.remove('done'); });
+    progress(); apply();
+  });
+  var quizBtn = document.getElementById('quizBtn');
+  quizBtn.addEventListener('click', function () {
+    var on = !body.classList.contains('quiz');
+    body.classList.toggle('quiz', on); quizBtn.setAttribute('aria-pressed', on);
+    items.forEach(function (it) { it.classList.remove('reveal'); });
+  });
+
+  var toTop = document.getElementById('toTop');
+  toTop.addEventListener('click', function () { window.scrollTo({ top: 0 }); });
+  window.addEventListener('scroll', function () { toTop.classList.toggle('show', window.scrollY > 800); }, { passive: true });
+
+  progress(); apply();
+})();
+</script>
+</body>
+</html>

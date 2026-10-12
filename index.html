@@ -121,6 +121,8 @@ main { min-width: 0; padding: 24px 0 120px; max-width: 860px; }
 .hero .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .hero .chips a { font-size: 13.5px; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 999px; background: var(--surface-2); color: var(--text); border: 1px solid var(--border); }
 .hero .chips a:hover { border-color: var(--accent); color: var(--accent); }
+.hero .chips a.hot { background: var(--accent); color: #fff; border-color: var(--accent); }
+.hero .chips a.hot:hover { color: #fff; filter: brightness(1.08); }
 
 /* 본문 */
 .content h2 { font-size: 23px; margin: 56px 0 16px; padding-top: 8px; border-top: 2px solid var(--text); letter-spacing: -0.02em; }
@@ -232,6 +234,8 @@ details[open] { background: var(--accent-soft); }
       <h1>손해보험 등록시험 기본강의 정리 (김토리쌤, 2026)</h1>
       <p class="sub">YouTube 자동자막을 기반으로 정리했습니다. 빨간 <span style="color:var(--ts);font-weight:700">▶ 시간</span>을 누르면 강의의 해당 장면이 열립니다.</p>
       <div class="chips">
+        <a href="exam.html" class="hot">⏱️ 시험 전 훑어보기</a>
+        <a href="memorize.html" class="hot">🧠 암기 체크리스트</a>
         <a href="#" data-jump="숫자·기준 암기표">🔢 숫자 암기표</a>
         <a href="#" data-jump="헷갈리는 비교">⚠️ 함정 모음</a>
         <a href="#" data-jump="강사 강조 포인트">⭐ 강조 포인트</a>
