@@ -45,6 +45,8 @@ body { margin: 0; background: var(--bg); color: var(--text); font-family: "Prete
 .hero { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 20px; box-shadow: var(--shadow); }
 .hero h1 { margin: 0 0 6px; font-size: 23px; line-height: 1.35; letter-spacing: -0.02em; }
 .hero p { margin: 0 0 12px; color: var(--muted); font-size: 14.5px; }
+.btn.big { display: block; width: 100%; padding: 11px 14px; font-size: 15.5px; margin-bottom: 14px; border-radius: 12px; background: var(--accent); color: #fff; border-color: var(--accent); }
+.btn.big[aria-pressed="true"] { background: var(--text); border-color: var(--text); color: var(--bg); }
 .progress { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 700; }
 .pbar { flex: 1; height: 10px; border-radius: 999px; background: var(--surface-2); overflow: hidden; }
 .pbar > i { display: block; height: 100%; width: 0; background: var(--done); border-radius: 999px; transition: width .25s; }
@@ -115,6 +117,13 @@ body.todo .item.done { display: none; }
   .bar { top: 54px; }
 }
 @media print { .topbar, .bar, #toTop, .slide { display: none !important; } .sec { break-inside: avoid; } }
+
+.tabs { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; max-width: 860px; margin: 0 auto; padding: 12px 16px 0; }
+.tabs::-webkit-scrollbar { display: none; }
+.tabs a { flex: none; padding: 8px 13px; border-radius: 12px; font-size: 14px; font-weight: 700; text-decoration: none; color: var(--text); background: var(--surface); border: 1px solid var(--border); white-space: nowrap; }
+.tabs a:hover { border-color: var(--accent); color: var(--accent); }
+@media (max-width: 600px) { .tabs .l { display: none; } .tabs a { flex: 1 1 0; text-align: center; padding: 8px 6px; font-size: 13.5px; } }
+.tabs a[aria-current="page"] { background: var(--text); color: var(--bg); border-color: var(--text); }
 </style>
 </head>
 <body>
@@ -124,10 +133,12 @@ body.todo .item.done { display: none; }
   <button class="btn" id="slideBtn" aria-pressed="false">📺 장표 켜기</button>
   <button class="btn" id="themeBtn" aria-label="다크/라이트 전환">🌓</button>
 </header>
+<nav class="tabs" aria-label="페이지"><a href="./">📖 <span class="l">상세 </span>노트</a><a href="exam.html" aria-current="page">⏱️ <span class="l">시험 전 </span>훑어보기</a><a href="memorize.html">🧠 <span class="l">강조 </span>암기·보기<span class="l"> 패턴</span></a></nav>
 <div class="wrap">
   <section class="hero">
     <h1>시험 전 훑어보기</h1>
-    <p>단원 → 장표(소단원)별 핵심 요약과 그 장표에서 강사가 강조한 암기·보기 패턴입니다. <b>📺 장표 켜기</b>를 누르면 소단원마다 강의 화면 칸이 생기고, 탭하면 그 장표가 나오는 시점부터 재생됩니다(소리 꺼짐 상태로 시작).</p>
+    <p>단원 → 장표(소단원)별 핵심 요약과 그 장표에서 강사가 강조한 암기·보기 패턴입니다. 아래 <b>📺 장표 켜기</b>(오른쪽 위에도 있음)를 누르면 소단원마다 강의 화면 칸이 생기고, 탭하면 그 장표가 나오는 시점부터 재생됩니다(소리 꺼짐 상태로 시작).</p>
+    <button class="btn big" id="slideBig" type="button">📺 장표 켜기</button>
     <div class="progress"><span>외움</span><div class="pbar"><i id="pfill"></i></div><span id="ptext">0 / 205</span></div>
   </section>
   <div class="bar">
@@ -1648,11 +1659,13 @@ body.todo .item.done { display: none; }
       on = x; body.classList.toggle(cls, invert ? !x : x);
       b.setAttribute('aria-pressed', x);
       if (onLabel) b.textContent = x ? onLabel : offLabel;
+      if (btnId === 'slideBtn') { var big = document.getElementById('slideBig'); big.textContent = x ? '📺 장표 끄기 (글만 보기)' : '📺 장표 켜기 — 장표마다 강의 화면 보기'; big.setAttribute('aria-pressed', x); }
       store.set(key, x ? '1' : '0');
     }
     set(on);
     b.addEventListener('click', function () { set(!on); if (btnId === 'slideBtn' && !on) stopActive(); });
   }
+  document.getElementById('slideBig').addEventListener('click', function () { document.getElementById('slideBtn').click(); });
   bindToggle('slideBtn', 'slides', 'exam-slides', '📺 장표 끄기', '📺 장표 켜기', false);
   bindToggle('checkBtn', 'nocheck', 'exam-check', null, null, true);
   bindToggle('todoBtn', 'todo', 'exam-todo', null, null, false);

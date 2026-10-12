@@ -213,6 +213,13 @@ details[open] { background: var(--accent-soft); }
   details { border: 0; }
   details > *:not(summary) { display: block; }
 }
+
+.tabs { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; max-width: 1240px; margin: 0 auto; padding: 12px 16px 0; }
+.tabs::-webkit-scrollbar { display: none; }
+.tabs a { flex: none; padding: 8px 13px; border-radius: 12px; font-size: 14px; font-weight: 700; text-decoration: none; color: var(--text); background: var(--surface); border: 1px solid var(--border); white-space: nowrap; }
+.tabs a:hover { border-color: var(--accent); color: var(--accent); }
+@media (max-width: 600px) { .tabs .l { display: none; } .tabs a { flex: 1 1 0; text-align: center; padding: 8px 6px; font-size: 13.5px; } }
+.tabs a[aria-current="page"] { background: var(--text); color: var(--bg); border-color: var(--text); }
 </style>
 </head>
 <body>
@@ -223,6 +230,7 @@ details[open] { background: var(--accent-soft); }
   <button class="btn" id="oxBtn" title="OX 정답 모두 펼치기/접기">정답 펼치기</button>
   <button class="btn" id="themeBtn" title="다크/라이트 전환" aria-label="다크/라이트 전환">🌓</button>
 </header>
+<nav class="tabs" aria-label="페이지"><a href="./" aria-current="page">📖 <span class="l">상세 </span>노트</a><a href="exam.html">⏱️ <span class="l">시험 전 </span>훑어보기</a><a href="memorize.html">🧠 <span class="l">강조 </span>암기·보기<span class="l"> 패턴</span></a></nav>
 <div class="scrim" id="scrim"></div>
 <div class="layout" id="top">
   <aside class="toc" id="toc" aria-label="목차">
@@ -235,7 +243,7 @@ details[open] { background: var(--accent-soft); }
       <p class="sub">YouTube 자동자막을 기반으로 정리했습니다. 빨간 <span style="color:var(--ts);font-weight:700">▶ 시간</span>을 누르면 강의의 해당 장면이 열립니다.</p>
       <div class="chips">
         <a href="exam.html" class="hot">⏱️ 시험 전 훑어보기</a>
-        <a href="memorize.html" class="hot">🧠 암기 체크리스트</a>
+        <a href="memorize.html" class="hot">🧠 강조 암기·보기 패턴</a>
         <a href="#" data-jump="숫자·기준 암기표">🔢 숫자 암기표</a>
         <a href="#" data-jump="헷갈리는 비교">⚠️ 함정 모음</a>
         <a href="#" data-jump="강사 강조 포인트">⭐ 강조 포인트</a>
