@@ -148,6 +148,11 @@ body.todo .item.done { display: none; }
 .tabs a:hover { border-color: var(--accent); color: var(--accent); }
 @media (max-width: 600px) { .tabs .l { display: none; } .tabs a { flex: 1 1 0; text-align: center; padding: 8px 6px; font-size: 13.5px; } }
 .tabs a[aria-current="page"] { background: var(--text); color: var(--bg); border-color: var(--text); }
+
+.subj { display: flex; gap: 6px; max-width: 860px; margin: 0 auto; padding: 10px 16px 0; }
+.subj a { flex: 1 1 0; text-align: center; padding: 7px 10px; border-radius: 10px; font-size: 13.5px; font-weight: 800; text-decoration: none; color: var(--muted); border: 1px dashed var(--border); white-space: nowrap; }
+.subj a[aria-current="page"] { color: var(--text); border-style: solid; border-color: var(--text); background: var(--surface); }
+.subj + .tabs { padding-top: 8px; }
 </style>
 </head>
 <body>
@@ -157,6 +162,7 @@ body.todo .item.done { display: none; }
   <button class="btn" id="slideBtn" aria-pressed="false">📺 장표 켜기</button>
   <button class="btn" id="themeBtn" aria-label="다크/라이트 전환">🌓</button>
 </header>
+<nav class="subj" aria-label="과목"><a href="./" aria-current="page">🔥 손해보험</a><a href="life/">❤️ 생명보험</a></nav>
 <nav class="tabs" aria-label="페이지"><a href="./">📖 <span class="l">상세 </span>노트</a><a href="exam.html" aria-current="page">⏱️ <span class="l">시험 전 </span>훑어보기</a><a href="memorize.html">🧠 <span class="l">강조 </span>암기·보기<span class="l"> 패턴</span></a></nav>
 <div class="wrap">
   <section class="hero">
